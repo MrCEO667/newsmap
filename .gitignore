@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+data/worker.lock
+data/*.db-wal
+data/*.db-shm

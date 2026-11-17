@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NewsMap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://unpkg.com/3d-force-graph@1.73.3/dist/3d-force-graph.min.js"></script>
+</head>
+<body>
+<div id="graph"></div>
+<div id="vignette"></div>
+<div id="grain"></div>
+<div id="labels"></div>
+
+<!-- ======================= top bar ======================= -->
+<div id="topbar">
+  <header class="island brand-island">
+    <div class="radar" aria-hidden="true"><i></i></div>
+    <div class="brand-txt">
+      <div class="brand"><span class="serif">News</span><span class="serif it">map</span></div>
+      <div class="tagline">signal observatory · AI × security</div>
+    </div>
+  </header>
+
+  <nav class="island cmd">
+    <label class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search signals, tags, CVEs…" autocomplete="off" spellcheck="false">
+      <kbd>/</kbd>
+    </label>
+    <div class="seg" id="days" role="tablist" aria-label="Time range">
+      <span class="seg-ind"></span>
+      <button data-v="1">24H</button><button data-v="3">3D</button><button data-v="7">7D</button><button data-v="31" class="on">30D</button>
+    </div>
+    <div class="selwrap"><select id="src" aria-label="Source"><option value="">All sources</option></select></div>
+    <label class="switch" title="Show stories the AI dropped as shallow after reading">
+      <input type="checkbox" id="showLow"><span class="knob"></span><span class="sw-l">Dropped</span>
+    </label>
+  </nav>
+
+  <div class="island actions">
+    <button id="statusPill" class="status" title="Update status"><i class="dot"></i><span id="statusText">connecting…</span></button>
+    <button id="briefBtn" class="ibtn" title="Briefing mode: fly through the top stories (B)">
+      <svg viewBox="0 0 24 24"><path d="M7 5v14l11-7z"/></svg><span>Brief</span></button>
+    <button id="fxBtn" class="ibtn" title="Glow, starfield and auto-rotation (F)">
+      <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></svg><span>FX</span></button>
+    <button id="refreshBtn" class="primary">
+      <svg viewBox="0 0 24 24" class="rf-ic"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg><span id="refreshTxt">Refresh</span>
+    </button>
+  </div>
+</div>
+
+<!-- ======================= left column ======================= -->
+<aside id="left">
+  <section id="mission" class="island panel hidden">
+    <div class="mc-head" id="mcHead" title="Click to collapse / expand">
+      <div class="ring">
+        <svg viewBox="0 0 64 64"><circle class="track" cx="32" cy="32" r="27"/><circle id="ringFg" class="fg" cx="32" cy="32" r="27"/></svg>
+        <b id="pPct">0%</b>
+      </div>
+      <div class="mc-title">
+        <div class="eyebrow" id="pEyebrow">MISSION CONTROL</div>
+        <div class="mc-main" id="pTitle">Updating</div>
+        <div class="mc-eta" id="pEtaShort"></div>
+      </div>
+      <span id="pState" class="badge"></span>
+      <button id="pHide" class="ibtn ghost sm" title="Hide">✕</button>
+    </div>
+    <div class="mc-body">
+      <div class="mc-times">
+        <div><small>Elapsed</small><b id="tEl">—</b></div>
+        <div><small>Remaining</small><b id="tRem">—</b></div>
+        <div><small>Done at</small><b id="tEnd">—</b></div>
+      </div>
+      <div id="pWait" class="wait hidden"></div>
+      <div class="pipeline" id="pSteps"></div>
+      <div class="st-detail" id="pStepDetail"></div>
+      <div class="ticker"><span class="caret">›</span><span id="pNow">…</span></div>
+      <div class="mc-stats">
+        <div><b id="sSeen">0</b><small>seen</small></div>
+        <div><b id="sPass">0</b><small>passed</small></div>
+        <div class="good"><b id="sKept">0</b><small>on map</small></div>
+        <div><b id="sLow">0</b><small>dropped</small></div>
+      </div>
+      <details id="pWarnWrap" class="hidden"><summary id="pWarnSum"></summary><ul id="pWarn"></ul></details>
+      <details id="termWrap"><summary>Terminal</summary><pre id="pLog"></pre></details>
+      <div class="pbtns">
+        <button id="pPause" class="ibtn">Pause</button>
+        <button id="pStop" class="ibtn danger">Stop</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="island panel">
+    <div class="ptitle">Constellations <small>hover to light up · click to hide</small></div>
+    <div id="legend"></div>
+  </section>
+
+  <section class="island panel grow">
+    <div class="ptitle">Signal feed <span id="count" class="cnt"></span>
+      <div class="mini-seg" id="sort"><button data-v="best" class="on">Top</button><button data-v="new">Latest</button></div>
+    </div>
+    <div id="list"></div>
+  </section>
+</aside>
+
+<!-- ======================= dossier ======================= -->
+<aside id="detail" aria-hidden="true">
+  <div class="brief-bar"><i></i></div>
+  <div class="d-top">
+    <span class="d-idx mono" id="dIdx"></span>
+    <div class="spacer"></div>
+    <button class="ibtn ghost sm" id="prevBtn" title="Previous (←)">←</button>
+    <button class="ibtn ghost sm" id="nextBtn" title="Next (→)">→</button>
+    <button class="ibtn ghost sm" id="closeDetail" title="Close (Esc)">✕</button>
+  </div>
+  <div id="detailBody"></div>
+</aside>
+
+<!-- ======================= timeline ======================= -->
+<section id="timeline" class="island">
+  <div class="tl-head"><span class="tl-t">Timeline</span><span id="tlInfo" class="mono"></span><span id="tlDay"></span></div>
+  <div id="tlBars"></div>
+  <div id="tlAxis" class="mono"></div>
+</section>
+
+<div id="empty" class="hidden">
+  <div class="radar big"><i></i></div>
+  <h2 class="serif">The sky is quiet</h2>
+  <p>Press <b>Refresh</b> to scan the last 30 days of AI &amp; security news.<br>The first scan reads a lot (about 2–3 hours), and stars appear as it goes.</p>
+</div>
+<div id="hint" class="mono">/ search · ← → browse · B brief · F effects · Esc close</div>
+<div id="toasts"></div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

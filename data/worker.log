@@ -1,0 +1,1478 @@
+02:04:36 Update started (backfill: last 1.0 days, up to 3 summaries)
+02:04:37 Hacker News: 25 items (25 new)
+02:05:44 KEEP 8/10  Qwen4-Max Efficiency and Performance Gains
+02:05:54 KEEP 9/10  uBlock Origin XSS Vulnerability Fixed
+02:06:03 KEEP 8/10  Tor Project Releases Urgent Fix for IPv6-Related DDoS Vulnerability
+02:06:04 Finished: 3 new stories on the map
+02:09:00 Update started (backfill: last 30.0 days, up to 400 summaries)
+02:09:02 CISA KEV: 33 items (33 new)
+02:09:03 GitHub Advisories: 58 items (58 new)
+02:09:05 r/netsec: 50 items (50 new)
+02:09:08 Lobsters: 101 items (94 new)
+02:09:11 HF Papers: 299 items (299 new)
+02:09:22 Hacker News: 1292 items (1220 new)
+02:10:01 r/ReverseEngineering: 50 items (41 new)
+02:10:03 Import AI: 5 items (5 new)
+02:10:04 OpenAI News: 80 items (73 new)
+02:10:05 Google DeepMind: 12 items (10 new)
+02:10:05 Hugging Face Blog: 30 items (30 new)
+02:10:09 Project Zero: 2 items (0 new)
+02:10:09 watchTowr Labs: 1 items (0 new)
+02:10:12 Krebs on Security: 6 items (5 new)
+02:10:15 Trail of Bits: 4 items (4 new)
+02:10:16 PortSwigger Research: 3 items (2 new)
+02:10:17 oss-security: 15 items (15 new)
+02:10:18 Full Disclosure: 15 items (15 new)
+02:10:18 simonwillison.net: 30 items (29 new)
+02:10:19 jeffgeerling.com: 5 items (5 new)
+02:10:20 ! r/MachineLearning: HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/MachineLearning/top/.rss?t=month&limit=50
+02:10:20 seangoedecke.com: 17 items (16 new)
+02:10:21 daringfireball.net: 48 items (44 new)
+02:10:22 idiallo.com: 9 items (9 new)
+02:10:24 maurycyz.com: 3 items (2 new)
+02:10:26 pluralistic.net: 17 items (17 new)
+02:10:27 ! r/LocalLLaMA: HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/LocalLLaMA/top/.rss?t=month&limit=50
+02:10:27 shkspr.mobi: 20 items (19 new)
+02:10:28 mitchellh.com: 1 items (0 new)
+02:10:28 lcamtuf.substack.com: 8 items (6 new)
+02:10:29 dynomight.net: 3 items (3 new)
+02:10:31 utcc.utoronto.ca/~cks: 30 items (29 new)
+02:10:31 devblogs.microsoft.com/oldnewthing: 10 items (9 new)
+02:10:31 xeiaso.net: 8 items (8 new)
+02:10:32 lucumr.pocoo.org: 2 items (2 new)
+02:10:33 righto.com: 2 items (0 new)
+02:10:34 garymarcus.substack.com: 18 items (17 new)
+02:10:34 ! skyfall.dev: HTTPError: 404 Client Error: Not Found for url: https://skyfall.dev/rss.xml
+02:10:34 ! r/blueteamsec: HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/blueteamsec/top/.rss?t=month&limit=50
+02:10:36 johndcook.com: 30 items (30 new)
+02:10:37 matklad.github.io: 1 items (1 new)
+02:10:39 gilesthomas.com: 2 items (2 new)
+02:10:39 evanhahn.com: 4 items (4 new)
+02:10:40 terriblesoftware.org: 1 items (1 new)
+02:10:41 rakhim.exotext.com: 1 items (0 new)
+02:10:42 ! joanwestenberg.com: HTTPError: 404 Client Error: Not Found for url: https://www.joanwestenberg.com/rss
+02:10:43 micahflee.com: 1 items (1 new)
+02:10:43 nesbitt.io: 10 items (10 new)
+02:10:44 construction-physics.com: 7 items (7 new)
+02:10:45 tedium.co: 4 items (4 new)
+02:10:46 entropicthoughts.com: 6 items (5 new)
+02:10:47 buttondown.com/hillelwayne: 2 items (2 new)
+02:10:48 borretti.me: 4 items (3 new)
+02:10:49 wheresyoured.at: 7 items (7 new)
+02:10:50 dwarkesh.com: 6 items (6 new)
+02:10:50 geohot.github.io: 2 items (2 new)
+02:10:50 minimaxir.com: 1 items (0 new)
+02:10:52 blog.jim-nielsen.com: 7 items (5 new)
+02:10:53 dfarq.homeip.net: 10 items (9 new)
+02:10:53 filfre.net: 3 items (2 new)
+02:10:55 jyn.dev: 2 items (2 new)
+02:10:58 eli.thegreenplace.net: 2 items (2 new)
+02:11:01 oldvcr.blogspot.com: 2 items (1 new)
+02:11:02 hugotunius.se: 1 items (1 new)
+02:11:04 berthub.eu: 2 items (2 new)
+02:11:04 simone.org: 1 items (1 new)
+02:11:05 ! antirez.com: ReadTimeout: HTTPSConnectionPool(host='antirez.com', port=443): Read timed out. (read timeout=20)
+02:11:07 matduggan.com: 2 items (2 new)
+02:11:09 steveblank.com: 3 items (1 new)
+02:11:09 bernsteinbear.com: 4 items (4 new)
+02:11:10 troyhunt.com: 6 items (6 new)
+02:11:10 herman.bearblog.dev: 2 items (2 new)
+02:11:12 martinalderson.com: 4 items (4 new)
+02:11:13 experimental-history.com: 2 items (1 new)
+02:11:15 anildash.com: 2 items (2 new)
+02:11:17 ! rachelbythebay.com: ConnectTimeout: HTTPSConnectionPool(host='rachelbythebay.com', port=443): Max retries exceeded with url: /w/atom.xml (Caused by ConnectT
+02:11:17 miguelgrinberg.com: 1 items (1 new)
+02:11:21 computer.rip: 1 items (1 new)
+02:11:21 ! tedunangst.com: ConnectionError: HTTPSConnectionPool(host='www.tedunangst.com', port=443): Max retries exceeded with url: /flak/rss (Caused by NameResolu
+02:14:39 Stopped by user. Progress is saved; the next run continues where this one stopped.
+02:15:22 Update started (update: last 3.0 days, up to 90 summaries)
+02:15:24 Lobsters: 6 items (0 new)
+02:15:24 HF Papers: 19 items (0 new)
+02:15:25 r/netsec: 2 items (2 new)
+02:15:25 Hacker News: 90 items (0 new)
+02:16:10 r/blueteamsec: 21 items (21 new)
+02:16:10 Stopped by user. Progress is saved; the next run continues where this one stopped.
+02:16:12 Update started (backfill: last 30.0 days, up to 400 summaries)
+02:16:12 CISA KEV: 33 items (0 new)
+02:16:14 GitHub Advisories: 58 items (0 new)
+02:16:18 Lobsters: 101 items (0 new)
+02:16:21 HF Papers: 299 items (0 new)
+02:16:31 Hacker News: 1292 items (0 new)
+02:17:00 r/LocalLLaMA: 50 items (44 new)
+02:18:01 r/ReverseEngineering: 50 items (0 new)
+02:18:03 Import AI: 5 items (0 new)
+02:18:04 OpenAI News: 80 items (0 new)
+02:18:05 Google DeepMind: 12 items (0 new)
+02:18:05 Hugging Face Blog: 30 items (0 new)
+02:18:09 Project Zero: 2 items (0 new)
+02:18:10 watchTowr Labs: 1 items (0 new)
+02:18:12 Krebs on Security: 6 items (0 new)
+02:18:15 Trail of Bits: 4 items (0 new)
+02:18:16 PortSwigger Research: 3 items (0 new)
+02:18:17 oss-security: 15 items (0 new)
+02:18:18 Full Disclosure: 15 items (0 new)
+02:18:18 simonwillison.net: 30 items (0 new)
+02:18:19 jeffgeerling.com: 5 items (0 new)
+02:18:20 seangoedecke.com: 17 items (0 new)
+02:18:21 daringfireball.net: 48 items (0 new)
+02:19:06 ! antirez.com: ReadTimeout: HTTPSConnectionPool(host='antirez.com', port=443): Read timed out. (read timeout=20)
+02:19:07 idiallo.com: 9 items (0 new)
+02:19:09 maurycyz.com: 3 items (0 new)
+02:19:11 pluralistic.net: 17 items (0 new)
+02:19:12 shkspr.mobi: 20 items (0 new)
+02:19:13 lcamtuf.substack.com: 8 items (0 new)
+02:19:14 mitchellh.com: 1 items (0 new)
+02:19:15 dynomight.net: 3 items (0 new)
+02:19:37 ! utcc.utoronto.ca/~cks: HTTPError: 429 Client Error: Too Many Requests for url: https://utcc.utoronto.ca/~cks/space/blog/?atom
+02:19:39 xeiaso.net: 8 items (0 new)
+02:19:40 devblogs.microsoft.com/oldnewthing: 10 items (0 new)
+02:19:41 righto.com: 2 items (0 new)
+02:19:42 lucumr.pocoo.org: 2 items (0 new)
+02:19:42 ! skyfall.dev: HTTPError: 404 Client Error: Not Found for url: https://skyfall.dev/rss.xml
+02:19:43 garymarcus.substack.com: 18 items (0 new)
+02:19:46 ! rachelbythebay.com: ConnectionError: HTTPSConnectionPool(host='rachelbythebay.com', port=443): Max retries exceeded with url: /w/atom.xml (Caused by NameReso
+02:19:48 johndcook.com: 30 items (0 new)
+02:19:51 gilesthomas.com: 2 items (0 new)
+02:19:52 matklad.github.io: 1 items (0 new)
+02:19:53 evanhahn.com: 4 items (0 new)
+02:19:54 terriblesoftware.org: 1 items (0 new)
+02:19:56 rakhim.exotext.com: 1 items (0 new)
+02:19:58 ! joanwestenberg.com: HTTPError: 404 Client Error: Not Found for url: https://www.joanwestenberg.com/rss
+02:20:00 micahflee.com: 1 items (0 new)
+02:20:00 nesbitt.io: 10 items (0 new)
+02:20:01 construction-physics.com: 7 items (0 new)
+02:20:02 r/netsec: 50 items (0 new)
+02:20:02 tedium.co: 4 items (0 new)
+02:20:03 entropicthoughts.com: 6 items (0 new)
+02:20:04 buttondown.com/hillelwayne: 2 items (0 new)
+02:20:05 borretti.me: 4 items (0 new)
+02:20:06 wheresyoured.at: 7 items (0 new)
+02:20:07 dwarkesh.com: 6 items (0 new)
+02:20:07 minimaxir.com: 1 items (0 new)
+02:20:07 geohot.github.io: 2 items (0 new)
+02:20:09 blog.jim-nielsen.com: 7 items (0 new)
+02:20:10 filfre.net: 3 items (0 new)
+02:20:11 jyn.dev: 2 items (0 new)
+02:20:13 dfarq.homeip.net: 10 items (0 new)
+02:20:15 eli.thegreenplace.net: 2 items (0 new)
+02:20:17 oldvcr.blogspot.com: 2 items (0 new)
+02:20:18 hugotunius.se: 1 items (0 new)
+02:20:20 berthub.eu: 2 items (0 new)
+02:20:20 simone.org: 1 items (0 new)
+02:20:24 matduggan.com: 2 items (0 new)
+02:20:25 bernsteinbear.com: 4 items (0 new)
+02:20:25 steveblank.com: 3 items (0 new)
+02:20:26 troyhunt.com: 6 items (0 new)
+02:20:26 herman.bearblog.dev: 2 items (0 new)
+02:20:28 martinalderson.com: 4 items (0 new)
+02:20:32 experimental-history.com: 2 items (0 new)
+02:20:34 anildash.com: 2 items (0 new)
+02:20:38 miguelgrinberg.com: 1 items (0 new)
+02:20:45 computer.rip: 1 items (0 new)
+02:20:48 ! tedunangst.com: ConnectionError: HTTPSConnectionPool(host='www.tedunangst.com', port=443): Max retries exceeded with url: /flak/rss (Caused by NameResolu
+02:21:01 r/blueteamsec: 50 items (34 new)
+02:24:02 r/MachineLearning: 50 items (50 new)
+02:49:13 KEEP 9/10  DeepMind uses AI to formally verify Signal's cryptographic code
+02:49:22 KEEP 9/10  Hybrid Reasoning Agents Improve Efficiency and Accuracy in AI Tasks
+02:49:34 KEEP 9/10  Apache HTTP Server RCE Vulnerability CVE-2026-119618
+02:49:44 KEEP 9/10  UEFI Firmware Flaw Threatens Millions of Servers
+02:49:56 KEEP 9/10  DeepSeek V3 Implemented in 190 JAX Lines on MacBook
+02:50:09 KEEP 9/10  PostgreSQL 22-year-old type confusion leads to RCE (CVE-2026-6460)
+02:50:16 KEEP 8/10  eMudhra OTP Login Bypass via Brute Force
+02:50:24 KEEP 9/10  Terminal2Shell: Terminal emulators allow arbitrary shell access
+02:50:32 KEEP 9/10  Windows HTTP.sys NTLM Token Capture Exploit for SYSTEM Privilege Escalation
+02:51:47 KEEP 8/10  North Korea Steals $400M via Webcam-Based Crypto Theft
+02:51:57 KEEP 9/10  LLMs Cannot Be Fully Aligned in Principle
+02:52:19 KEEP 8/10  TCL Android TV Root via Mali GPU Page-Cache Write
+02:53:20 KEEP 9/10  Hive Mind Equivalence to Reinforcement Learning Proven
+02:53:34 KEEP 9/10  ssh Password Bypass via '*' in musl libc
+02:57:03 KEEP 9/10  Mistral Releases Mistral Large 4 with Enhanced Coding and Cybersecurity
+02:57:17 KEEP 9/10  Qwen 3.8 27B demonstrates weight-space programming capabilities
+02:57:35 KEEP 8/10  Gemini 4 Hydrogen Introduces Speed and Efficiency for Everyday Work
+02:57:48 KEEP 8/10  Block's Dessa Model Trained Exclusively on Speech Data
+02:57:58 KEEP 9/10  Meta's AI Deepfake Scams Cost $16B in Fraud
+02:58:11 KEEP 9/10  E-means Outperforms Lloyd's Algorithm with 10–45× Speedup on GPU
+02:58:25 KEEP 9/10  LLMs enable large-scale formal verification of software with AI
+02:58:38 KEEP 9/10  Chinese AI models show Blackwell GPU fingerprints
+02:59:55 KEEP 9/10  333 Tor exit nodes hacked to intercept SSH traffic
+03:00:11 KEEP 9/10  Broccoli2Shell: Brotli Decoder RCE in Node.js, Python, and More
+03:00:21 KEEP 9/10  OpenAI AI Agents Communicate via CPU Cache
+03:00:36 KEEP 9/10  Edge0-145B Enables 145B-Param AI on Personal Computers
+03:00:49 KEEP 9/10  Azure API Connections Enable Cross-Tenant Compromises
+03:01:02 KEEP 9/10  Firecracker VM Escape Achieved via Register Frame Manipulation
+03:01:15 KEEP 9/10  Inception Introduces Mercury 3: 40x Larger, 3x Smarter Diffusion LLM
+03:01:30 KEEP 9/10  Anthropic Advances Provable Inference with zkSNARKs for AI Models
+03:01:50 KEEP 9/10  Plex Vulnerabilities Exploited in the Wild to Deploy Cryptominer
+03:02:02 KEEP 9/10  http2shell: Brotli RCE affects Node, Python, and .NET
+03:02:18 KEEP 9/10  Dream-1 Breaks Robot Intelligence Chicken-and-Egg Loop
+03:02:29 KEEP 8/10  Global Security Agencies Use Ad-Based Surveillance via Webloc
+03:02:35 KEEP 7/10  Samsung TVs use Bluetooth to spy on home microphones
+03:02:49 KEEP 9/10  Maxwell: AI Model Optimizes Code Execution in Real-Time
+03:03:04 KEEP 9/10  Qwen3-1.7B's internal conversation states mapped in vector space
+03:03:15 KEEP 9/10  New AI Backdoor via Pretraining Poisoning
+03:03:24 KEEP 8/10  OpenDS-World benchmark highlights AI's gap in real-world deep search
+03:03:32 KEEP 8/10  Android clipboard security flaw allows app access without user confirmation
+03:03:42 KEEP 9/10  LEV Model Enhances Reasoning Depth for Accurate Answers
+03:03:51 KEEP 9/10  LoCo cuts reasoning length by 40% without sacrificing accuracy
+03:04:00 KEEP 8/10  OpenMobile-2 excels in mobile agent benchmarks with hybrid GUI-tool interactions
+03:04:09 KEEP 9/10  SimpleLoRIF filters safety-degrading data in LLM training
+03:04:20 KEEP 9/10  Drex Decision Models Set New Accuracy Records in AI Decision Tasks
+03:04:29 KEEP 9/10  Memory Tax: AI Agents' Memory Systems Often Underperform RAG
+03:04:38 KEEP 9/10  AgentBaton cuts API costs by 65.9% with model handoffs
+03:04:48 KEEP 9/10  VLM Agents Fall Short in Embodied Tasks, Closed-Weight Models Lead
+03:04:57 KEEP 9/10  Raw RAG Outperforms Complex Agentic Memory in Conversation Tasks
+03:05:07 KEEP 9/10  Épi Achieves Record-Breaking Results in Math and Algorithmic Tasks
+03:05:16 KEEP 9/10  Diffusion Models Adjust Speed Based on Task Complexity and Language
+03:05:26 KEEP 9/10  LLM Agents Leak Sensitive Data via Mosaic Effect
+03:05:41 KEEP 9/10  Web Frameworks Overtrust Forwarded Headers, Leading to IP Spoofing
+03:06:48 KEEP 9/10  PHP2Shell Deep Dive: Understanding Memory Exploits in PHP
+03:07:21 KEEP 9/10  ARTEX: AI-Powered Cybercrime and Espionage Tool in Use
+03:08:22 KEEP 9/10  Agentic Threat Activity Surpasses Critical Threshold
+03:08:33 KEEP 9/10  Paul Christiano: 12-Month Timeline for AI Government Takeover
+03:08:44 KEEP 8/10  OpenSSH + musl libc password authentication bypass
+03:08:56 KEEP 9/10  AI Subcontracting, Wet Labs, and Sabotage in AI Development
+03:08:57 Stopped by user. Progress is saved; the next run continues where this one stopped.
+03:13:31 Update started (backfill: last 30.0 days, up to 400 summaries)
+03:13:34 CISA KEV: 33 items (0 new)
+03:13:38 GitHub Advisories: 58 items (0 new)
+03:13:39 Lobsters: 101 items (0 new)
+03:13:52 HF Papers: 299 items (0 new)
+03:13:59 Hacker News: 1295 items (4 new)
+03:14:10 r/ReverseEngineering: 50 items (0 new)
+03:15:12 r/LocalLLaMA: 50 items (0 new)
+03:15:18 Import AI: 5 items (0 new)
+03:15:20 OpenAI News: 80 items (0 new)
+03:15:23 Google DeepMind: 12 items (0 new)
+03:15:23 Hugging Face Blog: 30 items (0 new)
+03:15:28 Project Zero: 2 items (0 new)
+03:15:30 watchTowr Labs: 1 items (0 new)
+03:15:34 Krebs on Security: 6 items (0 new)
+03:15:36 Trail of Bits: 4 items (0 new)
+03:15:38 PortSwigger Research: 3 items (0 new)
+03:15:40 oss-security: 15 items (0 new)
+03:15:41 Full Disclosure: 15 items (0 new)
+03:15:42 simonwillison.net: 30 items (0 new)
+03:15:43 jeffgeerling.com: 5 items (0 new)
+03:15:45 seangoedecke.com: 17 items (0 new)
+03:15:47 daringfireball.net: 48 items (2 new)
+03:16:34 ! antirez.com: ReadTimeout: HTTPSConnectionPool(host='antirez.com', port=443): Read timed out. (read timeout=20)
+03:16:36 idiallo.com: 9 items (0 new)
+03:16:39 maurycyz.com: 3 items (0 new)
+03:16:44 pluralistic.net: 17 items (0 new)
+03:16:46 shkspr.mobi: 20 items (0 new)
+03:16:49 lcamtuf.substack.com: 8 items (0 new)
+03:16:50 mitchellh.com: 1 items (0 new)
+03:16:52 dynomight.net: 3 items (0 new)
+03:16:59 utcc.utoronto.ca/~cks: 30 items (0 new)
+03:17:02 xeiaso.net: 8 items (0 new)
+03:17:17 devblogs.microsoft.com/oldnewthing: 10 items (0 new)
+03:17:26 righto.com: 2 items (0 new)
+03:17:30 r/netsec: 50 items (0 new)
+03:17:30 lucumr.pocoo.org: 2 items (0 new)
+03:17:31 ! skyfall.dev: HTTPError: 404 Client Error: Not Found for url: https://skyfall.dev/rss.xml
+03:17:32 garymarcus.substack.com: 18 items (0 new)
+03:17:34 ! rachelbythebay.com: ConnectionError: HTTPSConnectionPool(host='rachelbythebay.com', port=443): Max retries exceeded with url: /w/atom.xml (Caused by NameReso
+03:17:36 johndcook.com: 30 items (0 new)
+03:17:44 gilesthomas.com: 2 items (0 new)
+03:17:46 matklad.github.io: 1 items (0 new)
+03:17:48 evanhahn.com: 4 items (0 new)
+03:17:50 terriblesoftware.org: 1 items (0 new)
+03:17:52 rakhim.exotext.com: 1 items (0 new)
+03:17:54 ! joanwestenberg.com: HTTPError: 404 Client Error: Not Found for url: https://www.joanwestenberg.com/rss
+03:17:58 micahflee.com: 1 items (0 new)
+03:17:58 nesbitt.io: 10 items (0 new)
+03:18:03 construction-physics.com: 7 items (0 new)
+03:18:05 tedium.co: 4 items (0 new)
+03:18:07 entropicthoughts.com: 6 items (0 new)
+03:18:09 buttondown.com/hillelwayne: 2 items (0 new)
+03:18:16 borretti.me: 4 items (0 new)
+03:18:17 r/MachineLearning: 50 items (0 new)
+03:18:27 minimaxir.com: 1 items (0 new)
+03:18:28 wheresyoured.at: 7 items (0 new)
+03:18:30 geohot.github.io: 2 items (0 new)
+03:18:33 blog.jim-nielsen.com: 7 items (0 new)
+03:18:34 dwarkesh.com: 6 items (0 new)
+03:18:37 dfarq.homeip.net: 10 items (0 new)
+03:18:48 filfre.net: 3 items (0 new)
+03:18:51 jyn.dev: 2 items (0 new)
+03:18:59 eli.thegreenplace.net: 2 items (0 new)
+03:19:18 hugotunius.se: 1 items (0 new)
+03:19:39 simone.org: 1 items (0 new)
+03:19:48 oldvcr.blogspot.com: 2 items (0 new)
+03:19:49 berthub.eu: 2 items (0 new)
+03:20:00 matduggan.com: 2 items (0 new)
+03:20:08 bernsteinbear.com: 4 items (0 new)
+03:20:10 steveblank.com: 3 items (0 new)
+03:20:12 troyhunt.com: 6 items (0 new)
+03:20:13 herman.bearblog.dev: 2 items (0 new)
+03:20:28 martinalderson.com: 4 items (0 new)
+03:20:40 anildash.com: 2 items (0 new)
+03:20:41 experimental-history.com: 2 items (0 new)
+03:20:46 miguelgrinberg.com: 1 items (0 new)
+03:21:02 ! chiark.greenend.org.uk/~sgtatham: ReadTimeout: HTTPSConnectionPool(host='www.chiark.greenend.org.uk', port=443): Read timed out. (read timeout=20)
+03:21:30 ! tedunangst.com: ConnectionError: HTTPSConnectionPool(host='www.tedunangst.com', port=443): Max retries exceeded with url: /flak/rss (Caused by NameResolu
+03:21:41 computer.rip: 1 items (0 new)
+03:22:17 r/blueteamsec: 50 items (0 new)
+03:23:23 ! Embedding failed (will retry): 500 Server Error: Internal Server Error for url: http://127.0.0.1:11434/api/embe
+03:23:23 KEEP 7/10  Qwen4-Max Efficiency and Performance Gains
+03:23:29 ! Summary failed: AlphaProof Code: 500 Server Error: Internal Server Error for url: http://127.0.0.1:11434/api/chat
+03:24:29 KEEP 7/10  Hybrid Reasoning Agents Improve AI Efficiency by 10.4%
+03:24:39 KEEP 7/10  Apache HTTP Server RCE Vulnerability CVE-2026-119618
+03:24:49 KEEP 7/10  UEFI firmware flaw affects most Earth servers
+03:25:01 KEEP 7/10  DeepSeek V3 Replicated in 190 JAX Lines on MacBook
+03:25:15 KEEP 7/10  PostgreSQL Type Confusion Leads to RCE via 22-Year-Old Bug
+03:25:23 KEEP 7/10  eMudhra OTP login bypass via lack of rate limiting
+03:25:33 KEEP 8/10  Terminal2Shell: Terminal emulators allow arbitrary shell access
+03:25:42 KEEP 7/10  Windows HTTP.sys NTLM token capture enables SYSTEM privilege escalation
+03:26:58 KEEP 7/10  North Korea Steals $400M via Webcam Hacking of 900+ Tech Workers
+03:28:08 ! Embedding failed (will retry): 500 Server Error: Internal Server Error for url: http://127.0.0.1:11434/api/embe
+03:28:08 KEEP 7/10  LLMs Can't Be Aligned in Principle
+03:29:50 Paused by user
+03:34:50 Stopped by user. Progress is saved; the next run continues where this one stopped.
+03:34:57 Update started (backfill: last 30.0 days, up to 400 summaries)
+03:35:07 Lobsters: 101 items (0 new)
+03:35:09 CISA KEV: 33 items (0 new)
+03:35:18 r/netsec: 50 items (0 new)
+03:35:25 GitHub Advisories: 58 items (0 new)
+03:36:15 HF Papers: 299 items (0 new)
+03:36:18 r/ReverseEngineering: 50 items (0 new)
+03:36:24 Hacker News: 1294 items (1 new)
+03:36:41 Import AI: 5 items (0 new)
+03:36:45 OpenAI News: 80 items (0 new)
+03:36:47 Google DeepMind: 12 items (0 new)
+03:36:49 Hugging Face Blog: 30 items (0 new)
+03:37:00 Project Zero: 2 items (0 new)
+03:37:06 watchTowr Labs: 1 items (0 new)
+03:37:06 r/LocalLLaMA: 50 items (0 new)
+03:37:10 Krebs on Security: 6 items (0 new)
+03:37:14 PortSwigger Research: 3 items (0 new)
+03:37:15 Trail of Bits: 4 items (0 new)
+03:37:16 oss-security: 15 items (0 new)
+03:37:16 Full Disclosure: 15 items (0 new)
+03:37:18 simonwillison.net: 30 items (0 new)
+03:37:18 jeffgeerling.com: 5 items (0 new)
+03:37:23 daringfireball.net: 48 items (1 new)
+03:37:23 seangoedecke.com: 17 items (0 new)
+03:37:26 idiallo.com: 9 items (0 new)
+03:37:29 maurycyz.com: 3 items (0 new)
+03:37:39 pluralistic.net: 17 items (0 new)
+03:37:41 shkspr.mobi: 20 items (0 new)
+03:37:43 lcamtuf.substack.com: 8 items (0 new)
+03:37:49 mitchellh.com: 1 items (0 new)
+03:37:53 dynomight.net: 3 items (0 new)
+03:38:09 ! antirez.com: timed out
+03:38:11 xeiaso.net: 8 items (0 new)
+03:38:12 devblogs.microsoft.com/oldnewthing: 10 items (0 new)
+03:38:16 righto.com: 2 items (0 new)
+03:38:18 lucumr.pocoo.org: 2 items (0 new)
+03:38:19 ! skyfall.dev: feed not found (404)
+03:38:20 garymarcus.substack.com: 18 items (0 new)
+03:38:23 ! utcc.utoronto.ca/~cks: rate-limited (429), will retry next run
+03:38:23 ! rachelbythebay.com: site offline (domain doesn't resolve)
+03:38:25 johndcook.com: 30 items (0 new)
+03:38:27 matklad.github.io: 1 items (0 new)
+03:38:30 gilesthomas.com: 2 items (0 new)
+03:38:31 evanhahn.com: 4 items (0 new)
+03:38:32 terriblesoftware.org: 1 items (0 new)
+03:38:33 rakhim.exotext.com: 1 items (0 new)
+03:38:36 ! joanwestenberg.com: feed not found (404)
+03:38:36 micahflee.com: 1 items (0 new)
+03:38:37 nesbitt.io: 10 items (0 new)
+03:38:38 construction-physics.com: 7 items (0 new)
+03:38:40 tedium.co: 4 items (0 new)
+03:38:41 entropicthoughts.com: 6 items (0 new)
+03:38:43 buttondown.com/hillelwayne: 2 items (0 new)
+03:38:48 borretti.me: 4 items (0 new)
+03:38:57 wheresyoured.at: 7 items (0 new)
+03:39:03 dwarkesh.com: 6 items (0 new)
+03:39:04 minimaxir.com: 1 items (0 new)
+03:39:05 geohot.github.io: 2 items (0 new)
+03:39:07 blog.jim-nielsen.com: 7 items (0 new)
+03:39:10 dfarq.homeip.net: 10 items (0 new)
+03:39:18 filfre.net: 3 items (0 new)
+03:39:23 jyn.dev: 2 items (0 new)
+03:39:24 r/MachineLearning: 50 items (0 new)
+03:39:30 eli.thegreenplace.net: 2 items (0 new)
+03:39:43 hugotunius.se: 1 items (0 new)
+03:39:56 simone.org: 1 items (0 new)
+03:40:01 oldvcr.blogspot.com: 2 items (0 new)
+03:40:04 berthub.eu: 2 items (0 new)
+03:40:09 matduggan.com: 2 items (0 new)
+03:40:15 steveblank.com: 3 items (0 new)
+03:40:18 bernsteinbear.com: 4 items (0 new)
+03:40:19 troyhunt.com: 6 items (0 new)
+03:40:20 herman.bearblog.dev: 2 items (0 new)
+03:40:21 r/blueteamsec: 50 items (0 new)
+03:40:32 martinalderson.com: 4 items (0 new)
+03:40:37 experimental-history.com: 2 items (0 new)
+03:40:38 anildash.com: 2 items (0 new)
+03:40:40 miguelgrinberg.com: 1 items (0 new)
+03:41:03 computer.rip: 1 items (0 new)
+03:41:08 ! tedunangst.com: site offline (domain doesn't resolve)
+03:41:55 PC is low on memory: 1.0 GB free, needs 1.2 GB. Waiting so your other apps don't crash. Continues automatically.
+03:42:15 PC is low on memory: 0.8 GB free, needs 1.2 GB. Waiting so your other apps don't crash. Continues automatically.
+03:42:35 PC is low on memory: 0.9 GB free, needs 1.2 GB. Waiting so your other apps don't crash. Continues automatically.
+03:43:35 PC is low on memory: 0.6 GB free, needs 1.2 GB. Waiting so your other apps don't crash. Continues automatically.
+03:43:56 Resources are free again, continuing
+03:44:40 drop 0/10  Qwen4-Max Efficiency and Performance Gains
+03:44:53 KEEP 10/10  DeepMind's AlphaProof Code Verifies Signal's Cryptographic Protocol
+03:44:53 PC is low on memory: 1.1 GB free, needs 1.2 GB. Waiting so your other apps don't crash. Continues automatically.
+03:45:53 PC is low on memory: 0.8 GB free, needs 1.2 GB. Waiting so your other apps don't crash. Continues automatically.
+03:46:01 Stopped by user. Progress is saved; the next run continues where this one stopped.
+03:46:02 Update started (backfill: last 30.0 days, up to 400 summaries)
+03:46:03 CISA KEV: 33 items (0 new)
+03:46:05 GitHub Advisories: 58 items (0 new)
+03:46:06 r/netsec: 50 items (0 new)
+03:46:09 Lobsters: 101 items (0 new)
+03:46:13 HF Papers: 299 items (0 new)
+03:46:13 Stopped by user. Progress is saved; the next run continues where this one stopped.
+03:46:14 Update started (backfill: last 30.0 days, up to 400 summaries)
+03:46:15 CISA KEV: 33 items (0 new)
+03:46:15 GitHub Advisories: 58 items (0 new)
+03:46:21 Lobsters: 101 items (0 new)
+03:46:25 HF Papers: 299 items (0 new)
+03:46:32 Hacker News: 1294 items (0 new)
+03:47:02 r/LocalLLaMA: 50 items (0 new)
+03:48:03 r/ReverseEngineering: 50 items (0 new)
+03:48:05 Import AI: 5 items (0 new)
+03:48:06 OpenAI News: 80 items (0 new)
+03:48:07 Google DeepMind: 12 items (0 new)
+03:48:08 Hugging Face Blog: 30 items (0 new)
+03:48:11 Project Zero: 2 items (0 new)
+03:48:12 watchTowr Labs: 1 items (0 new)
+03:48:15 Krebs on Security: 6 items (0 new)
+03:48:18 Trail of Bits: 4 items (0 new)
+03:48:19 PortSwigger Research: 3 items (0 new)
+03:48:20 oss-security: 15 items (0 new)
+03:48:21 Full Disclosure: 15 items (0 new)
+03:48:21 simonwillison.net: 30 items (0 new)
+03:48:22 jeffgeerling.com: 5 items (0 new)
+03:48:23 seangoedecke.com: 17 items (0 new)
+03:48:24 daringfireball.net: 48 items (0 new)
+03:49:10 ! antirez.com: timed out
+03:49:11 idiallo.com: 9 items (0 new)
+03:49:13 maurycyz.com: 3 items (0 new)
+03:49:15 pluralistic.net: 17 items (0 new)
+03:49:17 shkspr.mobi: 20 items (0 new)
+03:49:19 lcamtuf.substack.com: 8 items (0 new)
+03:49:19 mitchellh.com: 1 items (0 new)
+03:49:20 dynomight.net: 3 items (0 new)
+03:49:43 ! utcc.utoronto.ca/~cks: rate-limited (429), will retry next run
+03:49:45 xeiaso.net: 8 items (0 new)
+03:49:45 devblogs.microsoft.com/oldnewthing: 10 items (0 new)
+03:49:48 righto.com: 2 items (0 new)
+03:49:50 lucumr.pocoo.org: 2 items (0 new)
+03:49:50 ! skyfall.dev: feed not found (404)
+03:49:51 garymarcus.substack.com: 18 items (0 new)
+03:50:03 r/netsec: 50 items (0 new)
+03:50:06 johndcook.com: 30 items (0 new)
+03:50:09 gilesthomas.com: 2 items (0 new)
+03:50:10 matklad.github.io: 1 items (0 new)
+03:50:12 evanhahn.com: 4 items (0 new)
+03:50:13 terriblesoftware.org: 1 items (0 new)
+03:50:15 rakhim.exotext.com: 1 items (0 new)
+03:50:18 ! joanwestenberg.com: feed not found (404)
+03:50:20 micahflee.com: 1 items (0 new)
+03:50:21 nesbitt.io: 10 items (0 new)
+03:50:22 construction-physics.com: 7 items (0 new)
+03:50:23 tedium.co: 4 items (0 new)
+03:50:25 entropicthoughts.com: 6 items (0 new)
+03:50:27 buttondown.com/hillelwayne: 2 items (0 new)
+03:50:30 dwarkesh.com: 6 items (0 new)
+03:50:31 borretti.me: 4 items (0 new)
+03:50:32 wheresyoured.at: 7 items (0 new)
+03:50:34 minimaxir.com: 1 items (0 new)
+03:50:34 ! rachelbythebay.com: timed out
+03:50:34 geohot.github.io: 2 items (0 new)
+03:50:36 blog.jim-nielsen.com: 7 items (0 new)
+03:50:37 filfre.net: 3 items (0 new)
+03:50:37 dfarq.homeip.net: 10 items (0 new)
+03:50:39 jyn.dev: 2 items (0 new)
+03:50:42 eli.thegreenplace.net: 2 items (0 new)
+03:50:45 oldvcr.blogspot.com: 2 items (0 new)
+03:50:46 hugotunius.se: 1 items (0 new)
+03:50:48 simone.org: 1 items (0 new)
+03:50:48 berthub.eu: 2 items (0 new)
+03:50:52 matduggan.com: 2 items (0 new)
+03:50:54 steveblank.com: 3 items (0 new)
+03:50:55 bernsteinbear.com: 4 items (0 new)
+03:50:55 herman.bearblog.dev: 2 items (0 new)
+03:50:56 troyhunt.com: 6 items (0 new)
+03:50:58 martinalderson.com: 4 items (0 new)
+03:51:02 experimental-history.com: 2 items (0 new)
+03:51:03 r/blueteamsec: 50 items (0 new)
+03:51:04 anildash.com: 2 items (0 new)
+03:51:05 miguelgrinberg.com: 1 items (0 new)
+03:51:10 computer.rip: 1 items (0 new)
+03:51:11 ! tedunangst.com: site offline (domain doesn't resolve)
+03:54:04 r/MachineLearning: 50 items (1 new)
+03:55:27 drop 5/10  Hybrid Reasoning Agents Improve Efficiency and Accuracy in AI Tasks
+03:55:28 PC is low on memory: 0.5 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+03:55:48 Resources are free again, continuing
+03:56:00 KEEP 8/10  Apache HTTP Server RCE Vulnerability CVE-2026-119618
+03:56:12 KEEP 10/10  UEFI Firmware Flaw Threatens Global Server Security
+03:56:26 KEEP 8/10  DeepSeek V3 Implemented in 190 JAX Lines
+03:56:27 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+03:56:47 Resources are free again, continuing
+03:57:03 KEEP 10/10  PostgreSQL 22-Year-Old RCE Exploited via Type Confusion
+03:57:04 PC is low on memory: 0.0 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+03:57:24 PC is low on memory: 0.2 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+03:58:04 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+03:58:24 PC is low on memory: 0.2 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+03:58:44 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+03:59:24 PC is low on memory: 0.2 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:00:04 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:01:24 PC is low on memory: 0.2 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:01:44 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:02:04 PC is low on memory: 0.0 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:02:24 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:03:04 PC is low on memory: 0.0 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:03:24 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:10:04 PC is low on memory: 0.0 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:10:24 PC is low on memory: 0.1 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:10:44 PC is low on memory: 0.2 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:11:04 PC is low on memory: 0.3 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:11:24 PC is low on memory: 0.5 GB free, needs 0.5 GB. Waiting so your other apps don't crash. Continues automatically.
+04:11:32 Stopped by user. Progress is saved; the next run continues where this one stopped.
+04:11:35 Update started (backfill: last 30.0 days, up to 400 summaries)
+04:11:36 CISA KEV: 33 items (0 new)
+04:11:38 GitHub Advisories: 58 items (0 new)
+04:11:39 r/netsec: 50 items (0 new)
+04:11:42 Lobsters: 101 items (0 new)
+04:11:46 ! HF Papers: HTTPError: 400 Client Error: Bad Request for url: https://huggingface.co/api/daily_papers?d
+04:11:57 Hacker News: 1295 items (1 new)
+04:12:09 r/blueteamsec: 50 items (0 new)
+04:12:12 Import AI: 5 items (0 new)
+04:12:13 OpenAI News: 80 items (0 new)
+04:12:14 Google DeepMind: 12 items (0 new)
+04:12:14 Hugging Face Blog: 30 items (0 new)
+04:12:18 Project Zero: 2 items (0 new)
+04:12:18 watchTowr Labs: 1 items (0 new)
+04:12:21 Krebs on Security: 6 items (0 new)
+04:12:24 Trail of Bits: 4 items (0 new)
+04:12:25 PortSwigger Research: 3 items (0 new)
+04:12:26 oss-security: 15 items (0 new)
+04:12:26 Full Disclosure: 15 items (0 new)
+04:12:27 simonwillison.net: 30 items (0 new)
+04:12:27 jeffgeerling.com: 5 items (0 new)
+04:12:29 seangoedecke.com: 16 items (0 new)
+04:12:30 daringfireball.net: 48 items (1 new)
+04:13:10 r/LocalLLaMA: 50 items (0 new)
+04:13:11 idiallo.com: 9 items (0 new)
+04:13:13 maurycyz.com: 3 items (0 new)
+04:13:15 ! antirez.com: timed out · will be skipped for a week
+04:13:15 pluralistic.net: 17 items (0 new)
+04:13:17 lcamtuf.substack.com: 8 items (0 new)
+04:13:17 shkspr.mobi: 20 items (0 new)
+04:13:17 mitchellh.com: 1 items (0 new)
+04:13:18 dynomight.net: 3 items (0 new)
+04:13:20 xeiaso.net: 8 items (0 new)
+04:13:21 devblogs.microsoft.com/oldnewthing: 10 items (0 new)
+04:13:23 righto.com: 2 items (0 new)
+04:13:23 lucumr.pocoo.org: 2 items (0 new)
+04:13:24 ! skyfall.dev: feed not found (404) · will be skipped for a week
+04:13:25 garymarcus.substack.com: 18 items (0 new)
+04:13:28 ! rachelbythebay.com: site offline (domain doesn't resolve) · will be skipped for a week
+04:13:30 johndcook.com: 30 items (0 new)
+04:13:34 gilesthomas.com: 2 items (0 new)
+04:13:35 matklad.github.io: 1 items (0 new)
+04:13:36 evanhahn.com: 4 items (0 new)
+04:13:37 terriblesoftware.org: 1 items (0 new)
+04:13:38 rakhim.exotext.com: 1 items (0 new)
+04:13:40 ! utcc.utoronto.ca/~cks: rate-limited (429), will retry next run · will be skipped for a week
+04:13:40 ! joanwestenberg.com: feed not found (404) · will be skipped for a week
+04:13:41 micahflee.com: 1 items (0 new)
+04:13:42 nesbitt.io: 10 items (0 new)
+04:13:42 construction-physics.com: 7 items (0 new)
+04:13:43 tedium.co: 4 items (0 new)
+04:13:44 entropicthoughts.com: 6 items (0 new)
+04:13:45 buttondown.com/hillelwayne: 2 items (0 new)
+04:13:46 borretti.me: 4 items (0 new)
+04:13:47 wheresyoured.at: 7 items (0 new)
+04:13:48 dwarkesh.com: 6 items (0 new)
+04:13:49 geohot.github.io: 2 items (0 new)
+04:13:49 minimaxir.com: 1 items (0 new)
+04:13:50 blog.jim-nielsen.com: 7 items (0 new)
+04:13:52 filfre.net: 3 items (0 new)
+04:13:52 dfarq.homeip.net: 10 items (0 new)
+04:13:53 jyn.dev: 2 items (0 new)
+04:13:56 eli.thegreenplace.net: 2 items (0 new)
+04:13:59 oldvcr.blogspot.com: 2 items (0 new)
+04:13:59 hugotunius.se: 1 items (0 new)
+04:14:02 berthub.eu: 2 items (0 new)
+04:14:02 simone.org: 1 items (0 new)
+04:14:05 matduggan.com: 2 items (0 new)
+04:14:07 steveblank.com: 3 items (0 new)
+04:14:07 bernsteinbear.com: 4 items (0 new)
+04:14:08 troyhunt.com: 6 items (0 new)
+04:14:08 herman.bearblog.dev: 2 items (0 new)
+04:14:10 martinalderson.com: 3 items (0 new)
+04:14:14 experimental-history.com: 2 items (0 new)
+04:14:16 anildash.com: 2 items (0 new)
+04:14:20 miguelgrinberg.com: 1 items (0 new)
+04:14:27 computer.rip: 1 items (0 new)
+04:14:30 ! tedunangst.com: site offline (domain doesn't resolve) · will be skipped for a week
+04:14:54 ! chiark.greenend.org.uk/~sgtatham: timed out
+04:16:11 r/MachineLearning: 50 items (0 new)
+04:20:11 r/ReverseEngineering: 50 items (0 new)
+04:21:16 drop 0/10  eMudhra OTP login bypass via missing rate limits
+04:21:26 KEEP 10/10  Terminal2Shell: Terminal emulators allow shell access via keyboard input
+04:22:06 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:22:28 KEEP 7/10  Windows HTTP.sys NTLM Token Capture Exploit
+04:22:36 KEEP 6/10  North Korea Steals $400M via Webcam-Based Crypto Theft
+04:22:36 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:23:02 drop 4/10  LLM Alignment Is Inherently Impossible
+04:23:46 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:25:59 KEEP 8/10  CVE-2022-22706 Exploit Enables Mali GPU Root on TCL Android TV
+04:26:12 KEEP 7/10  Hive Mind Equivalence to Reinforcement Learning Proven
+04:26:12 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:26:43 KEEP 10/10  ssh Password Bypass via '*' in musl libc
+04:26:43 PC ran low on memory (0.3 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:27:17 KEEP 8/10  Mistral Releases Mistral Large 4 with Enhanced Coding and Cybersecurity
+04:27:17 PC ran low on memory (0.3 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:27:51 KEEP 10/10  Qwen 3.8 27B matches frontier models in weight-space programming
+04:27:51 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:28:27 KEEP 6/10  Gemini 4 Hydrogen Launches as Efficient Workhorse
+04:28:28 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:29:00 drop 0/10  Block's Dessa Model Trained Exclusively on Speech Data
+04:29:00 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:29:30 drop 2/10  Meta's AI Deepfake Scams Cost $16B in Fraud
+04:29:31 PC ran low on memory (0.4 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+04:30:13 KEEP 10/10  e-means outperforms k-means with 10–45× speed boost
+04:30:14 Stopped by user. Progress is saved; the next run continues where this one stopped.
+04:40:40 Update started (backfill: last 30.0 days, up to 400 summaries)
+04:40:40 Resuming: sources were collected less than an hour ago, skipping straight to filtering
+04:41:33 KEEP 8/10  LLMs enable large-scale formal verification of open-source software
+04:41:51 KEEP 8/10  Chinese AI models show Blackwell GPU fingerprints
+04:42:05 KEEP 8/10  333 Tor Exit Nodes Compromised by SSH MITM Attack
+04:42:24 KEEP 10/10  Broccoli2Shell: Brotli RCE in Node.js, Python and More
+04:42:37 KEEP 10/10  OpenAI AI Agents Communicate via CPU Cache
+04:42:55 KEEP 10/10  Edge0-145B Enables 145B-Parameter AI on Personal Computers
+04:43:11 KEEP 10/10  Azure API Connections Enable Cross-Tenant Compromises
+04:43:27 KEEP 10/10  Firecracker VM Escape Achieves Root Access via KVM Return
+04:43:43 KEEP 6/10  Inception Introduces Mercury 3, a High-Speed Diffusion LLM Outperforming GPT-6 and Claude 
+04:44:00 KEEP 10/10  Anthropic Advances Provable Inference with zkSNARKs for AI Models
+04:44:19 KEEP 10/10  Plex Vulnerabilities Exploited in the Wild to Deploy Cryptominer
+04:44:31 drop 3/10  http2shell: Brotli RCE affects Node, Python, and .NET
+04:44:49 KEEP 6/10  Dream-1 Breaks Robot Chicken-and-Egg Loop with Zero-Shot Generalization
+04:45:00 drop 4/10  Global Security Agencies Use Ad-Based Surveillance via Webloc
+04:45:07 drop 0/10  Samsung TVs use Bluetooth to spy on home microphones
+04:45:24 drop 2/10  Maxwell: AI Model Optimizes Code Execution in Real-Time
+04:45:39 drop 5/10  Qwen3-1.7B's conversation states mapped in vector space
+04:45:51 KEEP 10/10  New AI Security Threat: Backdoors via Pretraining Poisoning
+04:46:00 KEEP 8/10  OpenDS-World benchmark highlights AI deep search gaps vs humans
+04:46:10 drop 0/10  Android clipboard security flaw allows app access to copied text
+04:46:21 KEEP 7/10  LEV Model Boosts Accuracy with Looping for Hard Questions
+04:46:30 KEEP 7/10  LoCo cuts reasoning length by 45% without sacrificing accuracy
+04:46:39 KEEP 6/10  OpenMobile-2 excels in mobile agent benchmarks with hybrid GUI-tool use
+04:46:49 KEEP 8/10  Gradient-based filtering improves LLM safety by removing unsafe training data
+04:47:00 KEEP 8/10  Drex Decision Models Set New Accuracy Records in AI Decision Tasks
+04:47:09 KEEP 6/10  Memory Tax: AI Memory Systems Often Underperform RAG
+04:47:19 KEEP 8/10  AgentBaton cuts API costs by 66% with model handoffs
+04:47:29 KEEP 8/10  VLMs Fall Short in Embodied Tasks, Closed-Weight Models Lead
+04:47:37 KEEP 8/10  Raw RAG Outperforms Complex Agentic Memory in AI Conversations
+04:47:47 KEEP 6/10  Épi AI Agent Sets 120 Math Records with Self-Improvement
+04:47:55 KEEP 8/10  Diffusion Models Vary Cost by Task and Language
+04:48:04 KEEP 8/10  LLM Agents Leak Sensitive Data via Mosaic Effect
+04:48:21 KEEP 10/10  Web Frameworks Overtrust Forwarded Header, Leading to IP Spoofing
+04:48:33 KEEP 10/10  PHP2Shell Deep Dive: Memory Exploitation and PHP Internals
+04:49:49 KEEP 8/10  AI-Powered ARTEX Expands from Testing to Cybercrime and Espionage
+04:52:34 KEEP 8/10  Agentic Threat Activity Surpasses Critical Threshold
+04:52:47 drop 2/10  Paul Christiano: 12-Month Timeline for AI Government Takeover
+04:52:57 drop 2/10  OpenSSH + musl libc Password Bypass via 257+ Character Passwords
+04:53:11 KEEP 10/10  AI Subcontracting and Subterfuge in Development
+04:53:26 KEEP 10/10  OpenSSH 10.6p2 fixes password auth bypass in musl libc systems
+04:53:26 Recycled the AI model after 40 stories to release accumulated memory
+04:56:01 KEEP 8/10  AntiFox Agentic Pentesting Used in AWS Credential Theft and Lateral Movement
+04:56:12 KEEP 8/10  Open WebUI's Windows installer generates master key from install time
+04:56:23 KEEP 10/10  CSP Bypass Enables Credential Theft via Form Action
+04:56:32 KEEP 7/10  Chromium Use-After-Free Vulnerability Affects Major Browsers
+04:57:46 KEEP 10/10  Electron Apps Vulnerable to eMudhra Certificate Compromise
+04:57:55 drop 0/10  Gemini Robotics 2.5 boosts real-world dexterity with AI
+04:58:06 KEEP 10/10  US Gov DNS typo lets 32k IPs spoof .gov emails
+04:58:22 KEEP 10/10  AI Proves Quantum Conjecture, Meta Develops Tactus Gloves, NASA Plans Lunar Economy
+04:58:33 KEEP 6/10  GPUStack Improper Auth Allows Unauthenticated Admin Access
+04:58:42 KEEP 7/10  SonicWall SSLVPN Single-Factor Auth Bypass (CVE-2026-19868)
+04:58:57 KEEP 7/10  AI models excel at Blood on the Clocktower deception game
+04:59:07 drop 0/10  Z.ai Announces GLM-5.5 with 32B, 122B, and 256B Models
+05:00:20 KEEP 10/10  Firecracker sandbox escape via memory corruption (CVE-2026-122192)
+05:00:37 KEEP 10/10  40+ Vulnerabilities Found in OpenEMR Used by 100M Patients
+05:03:13 drop 2/10  LLMs Can Read/Write Neural Weights, Outperforming PPO-Trained Models
+05:03:26 KEEP 8/10  LLMs Struggle with Low-Latency Tasks; Realtime-Bench Benchmark Reveals Gaps
+05:03:40 KEEP 8/10  GNU Savannah Bash Backdoor via Email RCE
+05:04:49 KEEP 10/10  WordPress Pingback RCE via Brotli Decoder
+05:05:00 KEEP 8/10  Signal K path traversal exposes JWT secret and enables RCE
+05:07:45 KEEP 10/10  TightVNC Viewer Pre-auth RCE via 32-bit Overflow
+05:07:55 KEEP 8/10  Cisco ASA/FTD Vulnerability Causes DoS via NULL Pointer Dereference
+05:08:03 drop 0/10  Unsloth AI advances local AI accessibility
+05:08:16 KEEP 6/10  Google DeepMind launches Gemini 4 Carbon with cybersecurity enhancements
+05:08:27 KEEP 8/10  MLflow Remote Code Execution via Third-Party Scorer Deserialization
+05:08:41 KEEP 10/10  The Gentlemen: Top Ransomware Group with 800+ Victims
+05:08:52 KEEP 8/10  Agno 2.3.24 fixes critical code injection in FunctionCall
+05:09:03 KEEP 8/10  MONAILabel Server Crash or Inference Corruption via Invalid DICOM Values
+05:09:13 KEEP 7/10  Google Brotli Unchecked Return Value Vulnerability (CVE-2026-111497)
+05:10:23 KEEP 10/10  Telerik RCE via File Read and Upload
+05:10:36 drop 2/10  AI-Driven Security Reveals Decades of Tech Debt
+05:10:51 KEEP 10/10  AI Advances in Math Formalization, Program Building, and System Security
+05:11:56 KEEP 8/10  Eye Security disables 3 million Popcorn Time users' updater to prevent botnet
+05:12:05 KEEP 8/10  Obsidian-tc token vulnerability allows vault access (CVE-2026-77366)
+05:12:14 KEEP 8/10  Brotli Decoder Buffer Overflow in Node.js and PyPI Packages
+05:12:22 KEEP 6/10  mem0ai Databricks vector store SQL injection vulnerability
+05:12:34 KEEP 6/10  Kitten-TTS 2: 1.58-bit CPU-Only TTS with Voice Cloning and Multilingual Support
+05:12:49 KEEP 10/10  Hugging Face Cuts Inference Cost by 77% with VocabX Vocabulary Specialization
+05:13:02 KEEP 10/10  AI plugins reduce patching regressions by 25%
+05:13:13 KEEP 7/10  PHP 8.2/8.3/8.4/8.5 Critical RCE Vulnerabilities Fixed in 2026
+05:13:22 drop 0/10  PHP memory safety vulnerability demands urgent patching
+05:13:22 Recycled the AI model after 80 stories to release accumulated memory
+05:14:12 KEEP 6/10  EG SiteGuard Server OS Command Injection Vulnerability (CVE-2026-106931)
+05:14:21 drop 0/10  Maxwell model optimizes AI binaries in real-time without code changes
+05:17:29 KEEP 10/10  Drupal RCE via Field UI Callback (CVE-2026-108097)
+05:17:39 KEEP 10/10  Google Open Sources Harness2 for Self-Improving AI Agents
+05:17:56 KEEP 8/10  LLMs Can Read and Write Neural Network Weights
+05:19:02 KEEP 6/10  DeepInfer powers DeepSeek's high-throughput inference services
+05:19:12 drop 0/10  HackerBooks Tracks Hacker News Book Mentions
+05:19:22 drop 3/10  Binance Suffers $5.6B Hack, $2.4B Frozen
+05:19:33 drop 2/10  Anthropic's AI Revenue Growth and Financial Risks
+05:19:43 KEEP 8/10  Claude Code leaks user email in User-Agent header
+05:19:56 drop 3/10  PHP 8.6.0 RC7 Fixes Critical Shell Vulnerabilities
+05:20:12 KEEP 10/10  Ghostty 1.4 Release Notes
+05:20:25 KEEP 8/10  PHP2Shell exposes 40 years of legacy code debt
+05:20:42 KEEP 10/10  eMudhra Intermediate CA Private Keys Compromised
+05:20:56 drop 2/10  AI-Generated Code Should Be Open Source
+05:21:07 KEEP 10/10  Calif Hacks iPhone with Signal 1-Click and PDF Exploits
+05:21:18 drop 0/10  Nvidia Allegedly Engineered GPU Scarcity via AI Startup Investments
+05:21:32 KEEP 7/10  US Government withholds FISA court ruling on surveillance transparency
+05:21:50 KEEP 8/10  Kimi Introduces K3.1 Pro and Highspeed Models with Enhanced Capabilities
+05:22:06 KEEP 10/10  Libghostty 1.0 Released with ABI Stability and Broad Adoption
+05:22:20 drop 0/10  Genie 4: AI World Simulation with Mixed Success
+05:22:36 KEEP 8/10  AI Rediscovered Maya Site in 72 Hours
+05:22:50 KEEP 8/10  Gemini 4 Carbon Launches with Cybersecurity Focus
+05:23:08 KEEP 10/10  Claude Code Extension Backdoor via Cursor Marketplace
+05:23:21 KEEP 10/10  Lovable apps expose 200K+ private messages and passport details
+05:23:41 KEEP 10/10  Claude Fable 5.2 and Mythos 5.2 Release with Enhanced Capabilities
+05:23:56 drop 4/10  AWS Emulator Enables Local AWS API Testing Without Account
+05:24:17 KEEP 10/10  eMudhra's CA Keys Cracked Due to Weak 8-Bit Private Keys
+05:24:32 KEEP 10/10  Goldman Sachs restricts Claude Code to engineers
+05:24:48 KEEP 10/10  Mac's Undocumented Family Classifier Builds Personal Knowledge Graph
+05:24:57 drop 0/10  Samsung TVs Use AI for Voice Surveillance
+05:25:12 drop 4/10  Sebastian Raschka's reasoning model course from scratch
+05:25:24 KEEP 6/10  Subvocal Glasses Enable Silent Text Input via RF Sensing
+05:25:37 KEEP 6/10  User Switches from Claude Code to Pi Due to Frustrations
+05:25:47 drop 0/10  Opus 5.5 Performance Drop Noted in User Feedback
+05:26:05 KEEP 10/10  Mistral Launches Voxtral 3 Voice AI for Real-Time Multilingual Conversations
+05:26:23 KEEP 10/10  Linux TCP Use-After-Free Vulnerability CVE-2026-98432
+05:26:37 KEEP 10/10  WhatsApp's hidden AI instructions ignored EU data rights
+05:26:50 KEEP 10/10  Google Gemini now routes personal Drive/emails to human reviewers
+05:27:00 KEEP 8/10  Gemini Uses Chat History for Training, No Opt-Out for Subscribers
+05:27:00 Recycled the AI model after 120 stories to release accumulated memory
+05:27:46 drop 4/10  MS Paint Remote Code Execution Vulnerability
+05:28:03 KEEP 10/10  Qwenputer: RISC-V CPU Inside Qwen3.5 Model
+05:28:18 KEEP 10/10  AI is deskilling SREs by reducing hands-on practice
+05:28:29 drop 2/10  United Airlines bans AI agents from booking flights
+05:28:46 KEEP 10/10  Old CNN outperforms LLMs in skin cancer diagnosis
+05:28:47 PC ran low on memory (0.1 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+05:29:38 drop 5/10  AI models concur on human conformity
+05:29:49 drop 0/10  North Korea's fake job interview led to $6.3B Binance heist
+05:30:04 KEEP 8/10  WorldTUI: 360M model mimics terminal interactions
+05:30:20 drop 2/10  AI code generation leads to fragile SaaS codebases
+05:30:36 KEEP 6/10  Kimi K3.1 Pro Model Released with Enhanced Multimodal Capabilities
+05:30:53 KEEP 10/10  OpenAI Introduces GPT-6.1 Terra with 50% Lower API Costs
+05:31:08 drop 3/10  PHP Vulnerability Not as Easy to Exploit as Log4Shell
+05:31:27 KEEP 10/10  X Brand Car Unlock Vulnerability via Exposed Admin API
+05:31:39 KEEP 8/10  Ubuntu LTS kernels still unfixed for critical CVE-2026-98432
+05:31:51 KEEP 10/10  Claude Code leaks passwords in 1,122 GitHub files due to manual settings
+05:32:03 KEEP 10/10  Alpine Linux SSH Password Bypass Vulnerability
+05:32:12 drop 4/10  Bitcoin Stolen After 19.28 Hours
+05:32:28 KEEP 10/10  Mistral's Timestral outperforms larger models with 209M parameters
+05:32:45 KEEP 10/10  Nvidia RTX Spark Laptop's Linux GPU Performance Slows to 35%
+05:33:01 drop 2/10  LLM Voice and Human Prose Uncanny Valley
+05:33:17 drop 5/10  Anthropic Trained Claude on Illegally Obtained Stanford Professors' Books
+05:33:30 KEEP 6/10  DeepSeek search and fetch API pricing at $0.75 per 1000 requests
+05:33:45 drop 4/10  Tech Giants Push Privacy into Physical World with Always-On Devices
+05:34:01 KEEP 6/10  Hybrid Jev+Opus model cuts IDR costs by 4x with higher accuracy
+05:34:15 drop 5/10  Binance Suffers $6.3B Hack in 20-Minute Cyber Heist
+05:34:32 KEEP 10/10  LiteLLM 1.107.0 PyPI Release Contains Credential Stealer and Backdoor
+05:34:45 KEEP 10/10  uBlock Origin XSS Vulnerability Fixed
+05:35:02 KEEP 10/10  Claude Code sends agent transcripts to model for status updates
+05:35:11 drop 0/10  Lenovo's Fingerprint USB is Unencrypted SD Card in a Case
+05:35:23 drop 0/10  DHS Bans DeepSeek in U.S. Federal Civilian Agencies
+05:35:35 KEEP 6/10  Apple's Harbor app simplifies local AI model running on Macs
+05:35:50 KEEP 6/10  Google Launches Gemini Decisions API for Fast Multimodal Choices
+05:36:03 drop 0/10  Claude Duet Launches as Proactive AI Assistant
+05:36:12 drop 0/10  elect.horse copies gerrymandle's game mechanics
+05:36:26 KEEP 10/10  Outlook.com Temporarily Blocks Emails Without DMARC Records
+05:36:42 drop 4/10  Survival LLM: Offline AI Assistant for Emergency Knowledge
+05:36:59 KEEP 10/10  Google's 2027 Android App Registration Mandate Threatens Openness
+05:37:07 drop 5/10  OpenAI Re-Enables Codex Data Sharing Without User Consent
+05:37:23 drop 4/10  MiniMax M3.1 Flash Launches with Enhanced Efficiency and Cybersecurity Capabilities
+05:37:37 KEEP 8/10  NVIDIA's OpenShell enables secure AI agent fleets with formal verification
+05:37:37 Recycled the AI model after 160 stories to release accumulated memory
+05:38:27 KEEP 6/10  Google Launches Gemini 4 Hydrogen with Orchestrator for Efficient AI Workflows
+05:38:38 drop 0/10  Brooks's Law Still Applies in AI Agent Teams
+05:38:47 drop 0/10  Anthropic's strict rules block users during model training
+05:38:57 KEEP 7/10  Satellite Tracker Shows Weekly Passes and Real Images
+05:39:13 KEEP 10/10  OpenAI discovers 948 Linux LPE vulnerabilities with AI pipeline
+05:39:24 drop 0/10  Jonathan Blow's critique of AI in software development
+05:39:47 KEEP 10/10  Llama-modchip Runs 284B DeepSeek on 64GB RAM Without GPU
+05:40:01 KEEP 6/10  Northflank AI Secrets Breach and Response
+05:40:15 KEEP 10/10  LLMs run on small devices with custom optimizations
+05:40:33 KEEP 6/10  AI Cost of JavaScript Frameworks Benchmarked
+05:40:49 drop 4/10  Memdoor Workflow Achieves Parity with Fable 5 on LiveCodeBench Hard
+05:41:07 KEEP 6/10  Anthropic's Glasswing finds 442 CVEs but only 2 exploited
+05:41:24 KEEP 10/10  PHP2Shell: AI uncovers decade-old PHP RCE
+05:41:36 KEEP 8/10  Harvest's Price Hike and AI Customer Support Spark Outcry
+05:41:52 KEEP 6/10  RepRapMicron Achieves Micron-Scale 3D Printing with 1μm Accuracy
+05:42:12 KEEP 10/10  OpenAI and Anthropic slash LLM prices by 80% due to competition
+05:42:27 KEEP 7/10  AI reveals Gödel's hidden theorems in notebooks
+05:42:37 drop 0/10  PingCap TiDB Cloud Data Leak Amid Security Concerns
+05:42:51 drop 0/10  IBM CEO highlights cost-effectiveness of open-weight AI models on-prem
+05:43:07 KEEP 10/10  AI agents in Minecraft and Mindustry show emergent bureaucracy and survival strategies
+05:43:19 drop 0/10  US Tech Giants' AI Debt Surpasses $3.2T Amid 90% Surge
+05:43:38 KEEP 10/10  ggml v1.0.0 Enhances AI Inference Performance Across Hardware
+05:43:48 drop 0/10  Humble Bundle's security collapse due to vibecoding and LLM missteps
+05:44:06 KEEP 10/10  MaxxBench Reveals Model Performance Gaps in Task Adaptation
+05:44:18 KEEP 8/10  Meta Muse's URL sharing exposes user data via passive DNS
+05:44:27 drop 0/10  Italy fines Meta $887M for Android data access without consent
+05:44:45 KEEP 8/10  macOS Secure Enclave SSH Key Setup and Limitations
+05:44:58 drop 2/10  AI Tracks Drivers for Suspicious Travel Patterns, Not Traffic Violations
+05:45:09 drop 0/10  New Book Expands Generative AI Math Foundations
+05:45:20 KEEP 10/10  Anthropic Hacked via Cursor to Deliver SSH Backdoor to Claude Developers
+05:45:32 drop 0/10  Tailscale SSH Privilege Escalation Vulnerabilities
+05:45:44 drop 2/10  AfD Email Leak Reveals Far-Right Antisemitism and Racist Tendencies
+05:45:59 KEEP 10/10  Kitty 0.50 adds session restore and custom shaders
+05:46:09 drop 0/10  Amazon Cuts AI Division After Nova Fails to Gain Traction
+05:46:25 KEEP 8/10  Anthropic's AI Accelerates Its Own Research
+05:46:39 drop 4/10  OpenAI Launches Images 2.6 with GIFs and Enhanced Editing
+05:46:55 KEEP 8/10  TV manufacturers collect user data through microphones and ACR
+05:47:11 KEEP 6/10  Claude Fable 5.2 scores 65 on AI Intelligence Index, but is costly and slow
+05:47:25 KEEP 10/10  Google releases TorchTPU for native PyTorch support on TPUs
+05:47:44 KEEP 10/10  Bitly link hijacking affects Burger King, McDonald's, and Trump tweets
+05:47:44 Recycled the AI model after 200 stories to release accumulated memory
+05:48:33 KEEP 10/10  Fake stats cited by LLMs despite Google's neglect
+05:48:47 drop 4/10  Gemini Omni 1.2 Flash Launches with 15-Second Video Capabilities
+05:49:02 drop 5/10  Cerebras Deploys Trillion-Parameter AI Models on Wafer-Scale Chips
+05:49:17 KEEP 10/10  OpenAI's ChatGPT account takeover via shared link exploit
+05:49:17 PC ran low on memory (0.1 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+05:50:07 drop 4/10  Scribd Data Breach Affects User Payment Info
+05:50:20 drop 5/10  Anthropic's AI Costs Surpass Employee Salaries at Retail Prices
+05:50:30 drop 0/10  MCP Explained: A New Protocol for AI App Integration
+05:50:45 drop 4/10  Ripple-65B Preview Sets U.S. Open-Weight SOTA in Agentic Coding
+05:51:02 KEEP 10/10  Astra underperforms on safety tasks due to ethical concerns
+05:51:13 KEEP 8/10  Molly (Signal fork) lags in updates, remains vulnerable
+05:51:25 KEEP 6/10  NIST Releases Cybersecurity Guide for Solopreneurs
+05:51:38 KEEP 6/10  Gemini 4 Carbon Surpasses Others on Intelligence Index
+05:51:55 KEEP 8/10  Android Zero-Click DoS via Malformed WAP Push SMS
+05:52:09 KEEP 10/10  GitHub Introduces Workflow Lockfiles for GitHub Actions
+05:52:26 KEEP 10/10  Alibaba's Qwen3.8 model exhibits unexpected network behavior
+05:52:40 drop 4/10  Meta Introduces Muse Ember: Smallest, Most Efficient AI Model for Agentic Tasks
+05:52:56 KEEP 10/10  Tangled Launches Federated Code Forge with Self-Hosting and AT Protocol
+05:53:15 KEEP 10/10  Chained PHP2Shell exploit roots 25 servers, including US government systems
+05:53:32 KEEP 10/10  Mistral Launches Large 4 Model with Multimodal Capabilities
+05:53:43 drop 2/10  OpenAI Models Now Available on Google Cloud
+05:54:00 KEEP 10/10  Stealth Bot Bill Threatens Open Web's Core Principles
+05:54:11 drop 0/10  Swedish Gov Bans ChatGPT and Claude for Data Control
+05:54:25 drop 4/10  Geoffrey Hinton Warns AI Risks May Outweigh Benefits
+05:54:41 drop 0/10  Cisco empowers Gen Z engineer to refactor legacy code with AI
+05:54:55 KEEP 10/10  Rust library solves Cloudflare Turnstile without headless browser
+05:55:07 KEEP 6/10  AI Brain Fry: Managing Context Switching with Git-Based Prioritization
+05:55:16 drop 0/10  Dutch intel hacked Kushner's phone via GRU
+05:55:26 drop 0/10  Weball: Play Katamari on Websites
+05:55:39 drop 4/10  Claude Introduces Whiteboards, Sheets, and Data Tools
+05:55:52 KEEP 8/10  LeWM JEPA Model Achieves 85% Success in Long-Horizon Tasks
+05:56:10 KEEP 6/10  Gemini 4 Carbon Model Now Available for Developers and Enterprises
+05:56:18 drop 0/10  Samsung uses TensorFlow Lite for user tracking with 960x540 resolution
+05:56:29 drop 3/10  Tencent Hy4 Open-Weight Model Advances with Game Dev Focus
+05:56:46 KEEP 6/10  NVIDIA Auto Ontology simplifies enterprise data querying with semantic models
+05:56:59 drop 5/10  Coldframe honeypot mimics supermarket fridge controllers
+05:57:09 KEEP 7/10  Linum AI Trains Text-to-Image Model for $20K
+05:57:25 KEEP 10/10  AI Image Generation Guide: From Diffusion to Agents
+05:57:39 KEEP 6/10  KillSwitch: Programming Language Designed to Challenge LLMs
+05:57:53 KEEP 8/10  Hacktivists expose 40k DHS employee records via single sign-on breach
+05:58:09 KEEP 10/10  Google introduces Sleep framework for continual learning in LLMs
+05:58:09 Recycled the AI model after 240 stories to release accumulated memory
+05:58:49 drop 0/10  NCSC Netherlands Offline Due to PHP Vulnerability
+05:59:06 KEEP 10/10  Memory Latency Drives CPU Bottlenecks in Databases
+05:59:24 KEEP 10/10  Context Engineering Challenges in AI Models
+05:59:41 KEEP 8/10  Tiny world model runs games on Raspberry Pi Pico 2 W
+05:59:50 drop 0/10  Sam Altman's RAM Upload Idea Sparks Debate on AI and Efficiency
+06:00:05 KEEP 8/10  AWS detects PHP2Shell exploitation before public CVE disclosure
+06:00:22 KEEP 7/10  Feds link ShinyHunters ransomware to U.S. negotiation firms
+06:00:35 KEEP 6/10  Apple Launches Foundation Models Framework for Swift AI Integration
+06:00:49 drop 0/10  Code is now clay, not stone
+06:01:07 KEEP 8/10  AI Tax Agents Miss Deadline in Condo Sale Advice
+06:01:24 KEEP 8/10  OpenAI and Partners Fix Critical PHP Vulnerabilities via AI-Driven Coordination
+06:01:37 drop 0/10  ChatGPT Misdirects Users to 404 Media for Tech Support
+06:01:51 KEEP 10/10  VOLTA malware uses AI to prioritize high-value victims
+06:02:02 KEEP 6/10  Brave Search API now supports x402 agentic payments for real-time search
+06:02:20 KEEP 10/10  Unsloth Qwen3.8-27B GGUFs Use Dynamic V3.1 for 5-10% Accuracy Boost
+06:02:37 KEEP 10/10  Abliterated models can leak secrets via hidden backdoors
+06:02:50 drop 1/10  Sphinx: AI Git Hook for Code Understanding Before Deployment
+06:03:05 KEEP 10/10  OpenSSH 10.6p2 Fixes AI-Reported SSH Password Bypass
+06:03:17 drop 2/10  Apollo Economist: AI Offers No Financial Gains for Non-Tech Firms
+06:03:31 KEEP 8/10  OpenAI CLI Tool for REST API Integration
+06:03:49 KEEP 10/10  France's Danfoss Refrigeration Systems Hit by Cyberattacks
+06:04:06 KEEP 6/10  Qwen3-Coder's US bias leads to 19% more vulnerable code
+06:04:22 KEEP 6/10  JetBrains Launches ThinkRail AI-Driven IDE with Git Workspaces
+06:04:38 KEEP 8/10  Apple's New Retrieval Method Boosts RAG Efficiency
+06:04:52 KEEP 8/10  Atuin Threads Syncs AI Agent Sessions Across Machines
+06:05:03 drop 4/10  Tor Project Releases Urgent Fix for IPv6-Related DDoS Vulnerability
+06:05:13 drop 0/10  Toit v2.0.0 Released After Four Years of Development
+06:05:24 drop 2/10  OpenAI merges ChatGPT and Codex token allowances
+06:05:39 drop 2/10  PaperPilot: Rust-based PDF Engine with Local AI Integration
+06:05:53 KEEP 10/10  ISP DNS Hijacking via Unbound and DoH
+06:06:04 KEEP 10/10  Generative AI consumes more energy for non-English text
+06:06:17 KEEP 8/10  SIMD-Accelerated FAST on $2 ESP32-S3 Microcontroller
+06:06:35 drop 2/10  AI Slop Manifesto: Prioritizing Human Judgment Over AI Efficiency
+06:06:51 drop 5/10  LLM Confidence Scores Are Unreliable Without Calibration
+06:06:59 drop 0/10  Frontier Airlines Likely Breached via Email Scam
+06:07:13 KEEP 8/10  RAMBO Attack Leaks Data from Air-Gapped Computers via Radio Signals
+06:07:23 drop 2/10  ChatGPT Desktop forwards SSH agent to remote machines
+06:07:38 KEEP 10/10  Lean and AI Transform Formal Verification
+06:07:47 drop 0/10  Fable 5.1 uses simple image encoding for hidden messages
+06:07:57 drop 0/10  Queens Public Library Ransomware Attack
+06:07:57 Recycled the AI model after 280 stories to release accumulated memory
+06:08:46 KEEP 10/10  AI Agents Introduce Complexity, Require Deep Understanding
+06:09:06 KEEP 6/10  LLMs drive rapid PHP2Shell vulnerabilities and chaos
+06:09:19 KEEP 10/10  Ubuntu 26.04 Rust Sudo Incompatibility with Standard Sudo
+06:09:28 drop 4/10  New Mexico fines Meta $25B for privacy violations
+06:09:29 PC ran low on memory (0.1 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+06:10:20 drop 4/10  CorridorKey 2.0 Launches as Premium Keying Tool for VFX Workflows
+06:10:33 KEEP 6/10  AI Overload Slows Apple App Store Reviews for Synth Developers
+06:10:44 KEEP 6/10  Linode Resolves CVE-2026-98432 Security Vulnerability
+06:11:01 KEEP 10/10  Rust Standard Library Memory Safety Issues Found
+06:11:03 ! Summary failed: Building an AI-native engineering org: Expecting value: line 1 column 1 (char 0)
+06:11:03 PC ran low on memory (0.0 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+06:11:57 drop 0/10  AI Agent Helps Solve Order Discrepancy via Time Synchronization
+06:12:13 KEEP 10/10  PHP2Shell: No confirmed wild exploitation yet
+06:12:29 KEEP 8/10  Agent memory fragmentation needs OpenTelemetry-style standard
+06:12:30 ! Summary failed: Apple Security Research Device: Expecting value: line 1 column 1 (char 0)
+06:12:31 PC ran low on memory (0.0 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+06:13:24 KEEP 6/10  DeepSeek V4.1 Flash 1017 (Max) Model Performance and Pricing
+06:13:40 KEEP 8/10  Claude's Memory Components and Learning Loop
+06:13:54 drop 5/10  Nibnib: Ultra-fast image decompression with 4bpp compression
+06:14:08 ! Summary failed: OpenSSL 4.1.0: Expecting ',' delimiter: line 11 column 1 (char 243)
+06:14:08 PC ran low on memory (0.0 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+06:16:34 drop 1/10  VoidAccess streamlines dark web OSINT with AI-powered graph analysis
+06:16:44 drop 0/10  OpenSSH 10.6p2 fixes SSH password authentication bug via workaround
+06:16:59 KEEP 8/10  Baidu Releases ERNIE 5.5 Flash Base Model
+06:17:14 KEEP 10/10  PHP session.upload_progress UAF and two post-patch logic bugs
+06:18:37 KEEP 6/10  Brother Printer Debug Access via Telnet
+06:18:50 KEEP 8/10  AI Sources for Zombie Stats: Where Numbers Come From
+06:19:02 drop 3/10  AI Agent Swarms in Minecraft Fail Due to Bureaucracy
+06:19:20 KEEP 10/10  GLM-5.3 KV Cache Bug Affects 155 Requests
+06:19:31 drop 4/10  Brown student maps global AI labor networks
+06:19:48 KEEP 8/10  Python PoC Demonstrates PHP Memory Leak Exploit for Bitcoin Theft
+06:20:02 KEEP 10/10  Crystal 1.22.0 Released with Performance Enhancements and Tier 1 Support
+06:20:14 drop 5/10  New Text Generation Method Outperforms Diffusion Models in Speed and Quality
+06:20:26 KEEP 10/10  Firefox enhances privacy by reducing browser fingerprint uniqueness
+06:20:38 KEEP 6/10  Hob: Open-source on-device AI app for file-based tasks
+06:20:54 drop 2/10  OpenAI reorganizes robotics team to focus on general AI models
+06:21:06 KEEP 7/10  GPT-5.6 Sol Completes Factorio Peaceful Run
+06:21:18 KEEP 6/10  Altoids Tin Electronics Project Success After Five Iterations
+06:21:37 KEEP 10/10  Liquid Introduces LFM3 for Specialized AI Tasks
+06:21:57 KEEP 10/10  820 Restaurant Domains Impersonate Major Chains in Payment-Skimming Scam
+06:22:09 KEEP 8/10  JEPAs Outperform Next-Token Prediction in Cross-Modal Alignment
+06:22:25 KEEP 10/10  vLLM Improves Tool-Call Accuracy with Constrained Decoding
+06:22:40 drop 5/10  Anthropic Proposes AI Safety Bill with $1B or 50 Deaths Threshold
+06:22:51 drop 3/10  Brazil's Caixa insurer leaks 7.6M customer CPFs but no financial data
+06:22:51 Recycled the AI model after 320 stories to release accumulated memory
+06:24:14 drop 4/10  Apple's Mac word list shows 3 years of updates with 850 vulgar words
+06:25:41 KEEP 8/10  Momentic Launches AI QA Agents for App Testing
+06:25:57 KEEP 10/10  Notion AI chat data breach affects less than 1% of workspaces
+06:26:06 drop 2/10  Trigger.dev environment variables exposed in security incident
+06:26:19 drop 2/10  Retirement Savings Fuel AI Data Center Bubble
+06:26:34 KEEP 10/10  Reasoning as Pathfinding in Token Space
+06:26:43 KEEP 7/10  Trinity Framework Boosts Multimodal AI with 34 Point Performance Gain
+06:26:56 KEEP 6/10  OpenAI uses AI agents to speed up biological data analysis
+06:27:11 KEEP 8/10  Data Intelligence Engineer Emerges as AI-Driven Role
+06:27:28 KEEP 10/10  China Introduces AI Export Controls for Frontier Models
+06:27:41 KEEP 8/10  AI Agents Blocked by Major Websites
+06:27:55 KEEP 8/10  Qwen3-4B Model Reduces AI Writing Tics
+06:28:11 KEEP 8/10  Superlite speeds up agent workflows by parallelizing tasks
+06:28:22 drop 0/10  LibreAGI aims to preserve open AI models via decentralized tracking
+06:28:39 KEEP 8/10  DeepX's DX-M2 AI Chip Enables 100B Param Inference at 5W
+06:28:51 KEEP 6/10  GitHub Actions, Pages, Webhooks Degraded October 30, 2026
+06:29:00 drop 0/10  Claude's Coding Capabilities Under Scrutiny
+06:29:11 KEEP 6/10  LLMs Fall Short of Superhuman Weight Analysis
+06:29:26 KEEP 10/10  Bluesky Uses One-Hash Bloom Filter for High-Performance Data Lookup
+06:29:42 KEEP 8/10  AI agent manages vegetable garden with IoT sensors and data lakehouse
+06:29:58 KEEP 10/10  Figma Launches AI Agent for Design Editing
+06:30:17 KEEP 6/10  NVIDIA DGX Stations Serve GLM-5.3 at 607.8 tok/s with vLLM
+06:30:32 KEEP 6/10  Perplexly Decider v1.3 Enhances Decision Models with Locate Feature
+06:30:50 drop 4/10  NVL72 rack-scale NVLink boosts GPU utilization by 27%
+06:31:02 KEEP 6/10  Debian apt vulnerability allows MITM attacks via HTTP
+06:31:11 drop 2/10  Weight Space Misfolding Misleadingly Framed as a Virus
+06:31:23 KEEP 6/10  Nikon Photographer Loses Title After AI Use in Microscopy Video
+06:31:33 drop 0/10  AI agent attempts mouse brain surgery with manual overrides
+06:31:49 KEEP 10/10  AI Requests Emit 8.5x More CO2 in Texas Than Sweden
+06:32:00 drop 2/10  Chain of Thought for Humans Improves Puzzle Solving
+06:32:11 KEEP 6/10  Cursor releases Agent SDK for custom AI agents
+06:32:27 KEEP 10/10  OpenAI strengthens model training security with red-teaming and containment
+06:32:37 drop 2/10  AI's Role in Enclosing Scientific Information Commons
+06:32:47 drop 0/10  Italy fines Meta €880M for photo privacy breach
+06:33:03 KEEP 10/10  Xbox 360 Hypervisor Exploit Improved via Rock Band and Cache Optimizations
+06:33:15 KEEP 8/10  Go 1.23+ rejects certificate chains with eight distrusted SPKIs
+06:33:24 KEEP 8/10  MemT-1.0 introduces memory-native architecture for efficient long-context AI
+06:33:42 KEEP 8/10  AgentRun Enables Self-Improving AI Agents with Cost Savings
+06:33:57 drop 0/10  Ivan's AI Automation Journey
+06:34:10 KEEP 8/10  AI Bots Overwhelm University Libraries, Threatening Public Access
+06:34:10 Recycled the AI model after 360 stories to release accumulated memory
+06:35:32 KEEP 10/10  Claude reduces attack surface in 25 open-source projects
+06:35:42 KEEP 8/10  GPT-6-Astra Shows Promise in Embodied Tasks but Falls Short in Real-World Use
+06:35:53 KEEP 6/10  Huawei Introduces MACaQ for Efficient Local Model Quantization
+06:37:12 KEEP 10/10  Firefox Reduces Browser Fingerprint Uniqueness by 39% with New Protections
+06:37:29 KEEP 10/10  NVIDIA Nemotron 3.5 Transcribe leads open ASR for 40 languages
+06:37:43 KEEP 10/10  Cloudflare Protects Against PHP php2shell Vulnerabilities
+06:37:58 KEEP 6/10  Doomformer Transforms Neural Networks into DOOM Maps
+06:38:10 drop 2/10  Harness Engineering 101: LLM as Brain, Harness as Body
+06:38:20 drop 0/10  Last Museum Uses AI for Artwork Search
+06:38:37 KEEP 10/10  Drupal's reputation gap closes with AI and improved tools
+06:38:49 drop 2/10  AI disrupts CS education with inconsistent policies
+06:39:00 KEEP 8/10  PacketHound: Free, Open-Source Windows Firewall Tool
+06:39:15 KEEP 10/10  Post-training data lacks a commons like pre-training
+06:39:28 KEEP 6/10  Wave Forcing Enhances Video Generation Efficiency and Quality
+06:39:41 drop 2/10  Google Staff Resign Over AI Military Contracts
+06:40:00 KEEP 8/10  Gemma-4-26B-A4B reduced thinking tokens by 39-69% with minimal accuracy loss
+06:40:15 KEEP 10/10  Flide Achieves 9.5x Speed Boost for Jev-Like Decision Models
+06:40:24 drop 0/10  Anthropic Restricts AI-Generated Game Rewrites
+06:40:38 KEEP 6/10  Duet Outperforms Competitors with Streamlined AI Workflow
+06:40:46 drop 0/10  Google's Data Policies Allow Police to Track Users via App Ads
+06:40:57 drop 0/10  Memorilla Enhances LLM Memory Efficiency with Semantic Tokens
+06:41:09 KEEP 6/10  NVIDIA NVKE Preview for Kubernetes on GPU Infrastructure
+06:41:23 KEEP 8/10  Ginux: Userspace Kernel for Linux Compatibility
+06:41:40 KEEP 10/10  Rivet Launches Open-Source Actor Model for Agentic Workloads
+06:41:54 KEEP 10/10  Anthropic Uses Claude Agents for Real-Time System Monitoring
+06:42:12 KEEP 10/10  Block Blast uses AI models and ad rules to boost revenue
+06:42:21 KEEP 6/10  VFlash improves visual planning for AI tasks with faster, more accurate predictions
+06:42:30 drop 0/10  Proton uses AI for bot detection with Proof of Work
+06:42:40 drop 0/10  HN users warned about email scams from scraped HN addresses
+06:42:50 drop 0/10  Wearable companies use brain data for AI training without user consent
+06:43:05 drop 4/10  Developer rejects LLMs in coding due to cognitive and maintainability issues
+06:43:22 KEEP 6/10  AWS PHP Runtimes Vulnerable to Remote Code Execution
+06:43:33 drop 2/10  Coles faces cybersecurity incident with no data breach confirmed
+06:43:42 KEEP 7/10  LOWN reduces diffusion VLM computation by 35%
+06:43:58 KEEP 10/10  Claude designs 17 protein binders against scorpion neurotoxins
+06:44:07 KEEP 6/10  CarryOn improves long-horizon agent efficiency with object-oriented context
+06:44:18 drop 0/10  Mac App Takes Photos of Users When Away
+06:44:34 drop 0/10  Curiosity Traps in Digital Engagement
+06:44:41 drop 3/10  Work Agents Framework Unifies AI Task Execution
+06:44:56 KEEP 10/10  STE80 Humanizer Reduces AI Text Clarity Without Altering Meaning
+06:46:22 Finished: 266 new stories on the map
+08:00:00 Update started (update: last 3.0 days, up to 90 summaries)
+08:00:00 Skipping 6 feeds that failed 3 runs in a row (retried weekly): antirez.com, utcc.utoronto.ca/~cks, skyfall.dev, rachelbythebay.com, joanwestenberg.com, tedunangst.com
+08:00:02 HF Papers: 9 items (1 new)
+08:00:03 r/netsec: 2 items (0 new)
+08:00:03 Lobsters: 8 items (2 new)
+08:00:14 Hacker News: 88 items (6 new)
+08:01:03 r/blueteamsec: 21 items (0 new)
+08:01:06 Import AI: 1 items (0 new)
+08:01:07 OpenAI News: 11 items (0 new)
+08:01:08 Hugging Face Blog: 1 items (0 new)
+08:01:20 oss-security: 15 items (1 new)
+08:01:21 simonwillison.net: 8 items (1 new)
+08:01:22 jeffgeerling.com: 1 items (0 new)
+08:01:24 daringfireball.net: 17 items (1 new)
+08:01:26 idiallo.com: 1 items (0 new)
+08:01:32 shkspr.mobi: 3 items (0 new)
+08:01:34 lcamtuf.substack.com: 1 items (0 new)
+08:01:43 garymarcus.substack.com: 2 items (0 new)
+08:01:45 johndcook.com: 4 items (0 new)
+08:01:55 micahflee.com: 1 items (0 new)
+08:01:56 nesbitt.io: 1 items (0 new)
+08:01:57 construction-physics.com: 1 items (0 new)
+08:02:04 r/MachineLearning: 20 items (17 new)
+08:02:05 borretti.me: 2 items (0 new)
+08:02:07 dwarkesh.com: 1 items (0 new)
+08:02:08 geohot.github.io: 1 items (1 new)
+08:02:11 dfarq.homeip.net: 3 items (0 new)
+08:02:27 steveblank.com: 1 items (0 new)
+08:02:29 troyhunt.com: 1 items (0 new)
+08:04:04 r/ReverseEngineering: 18 items (12 new)
+08:08:06 r/LocalLLaMA: 14 items (14 new)
+08:09:14 Expired 505 older backlog items (older than 7 days, headline interest below 8)
+08:09:24 drop 0/10  optimjack: crypto skimmer targets major news sites
+08:09:32 KEEP 8/10  Tool reveals LLM quantization differences token-by-token
+08:10:59 KEEP 10/10  Training-Free Early Exit for Reasoning Models via Output Layer Modification
+08:11:17 KEEP 8/10  Windows 11 Tracks Coding Agents and Developer Tools Usage
+08:11:34 KEEP 10/10  Optimizely Malware Compromised 178 Global Brands
+08:11:49 KEEP 8/10  Active Directory's Legacy in Modern Cloud Identity Management
+08:11:57 drop 1/10  GPT-6 Astra Pioneers Agentic Robotics with Foundation Model and Embodied Harness
+08:12:08 KEEP 8/10  Claude Joins Video Calls as AI Assistant
+08:12:19 drop 0/10  AWS Launches Emulator for AI Agents to Test AWS Services
+08:12:31 KEEP 8/10  Agweb: macOS Browser for Agents with Focus-Free Browsing
+08:12:39 drop 0/10  AI Crash Expected Amid Hype and Infrastructure Strain
+08:12:50 drop 4/10  North Korea's $400M crypto hack uses fake video calls to steal identities
+08:13:03 KEEP 10/10  Anthropic enhances Claude Code with parallel AI workers for streamlined development
+08:13:11 KEEP 6/10  Gamer: AI Agent Framework for Real-Time Game Interaction
+08:13:21 KEEP 7/10  APEX improves streaming video generation with condition shifting
+08:13:29 KEEP 8/10  SO-Arena benchmarks System One models' capabilities and decision reliability
+08:13:35 KEEP 7/10  WikiTrace reduces memory errors in LLM agents by linking lessons to evidence
+08:13:44 KEEP 8/10  TOME-Math Boosts Math Reasoning by 16.7% with Structured Textbooks
+08:13:54 KEEP 7/10  MIRIX-2.0 Enhances LLM Agent Memory Efficiency
+08:14:03 KEEP 6/10  Duo v1 Enables Real-Time Full-Duplex Audiovisual Interaction
+08:14:13 KEEP 8/10  Tree-Isde improves LLM math accuracy with fewer edits
+08:14:22 KEEP 7/10  SteerDistill improves low-bit LLM agent performance via teacher steering
+08:14:31 KEEP 8/10  MMFlash boosts vision-language model speed with 3.58x speedup
+08:14:40 KEEP 7/10  Poor Actor Models Can Teach Well via Trajectory Judging
+08:14:48 drop 4/10  dNaViT matches language models in visual tasks
+08:14:56 KEEP 8/10  StepRefine Reduces Hallucinations in MDLMs via Step-Aware Decoding
+08:15:08 KEEP 8/10  MACaQ reduces inference cost for AI models with minimal accuracy loss
+08:15:16 KEEP 6/10  New Benchmark for Coding Agents in Robotics
+08:15:25 KEEP 6/10  FINCOSMOS Evaluates Financial Agents in Open-World Scenarios
+08:15:35 KEEP 8/10  SparseRead cuts AI agent token costs by 92.9% with minimal quality loss
+08:15:42 drop 4/10  Criteria Exposure in Embodied Agents May Overfit Verification Metrics
+08:15:54 KEEP 10/10  Debian Fixes Privilege Escalation in LightDM via GTK Greeters
+08:16:11 KEEP 10/10  ClickFix Attack Uses Blockchain Contracts to Execute Clipboard Commands
+08:16:24 KEEP 7/10  MicroQuickJS Out-of-Bounds Read in build_backtrace
+08:16:36 KEEP 7/10  CVE-2025-71467: GPAC MP4Box NULL Pointer Dereference in XMT Parsing
+08:16:45 KEEP 6/10  Apache Griffin Web Service REST API Unauthenticated
+08:16:57 drop 0/10  Open-weight models offer privacy and flexibility over closed LLMs
+08:17:09 KEEP 7/10  Marimba: Speech Understanding with One Model
+08:17:19 drop 4/10  Scientists Use ChatGPT to Accelerate Research and Idea Generation
+08:18:24 drop 4/10  Tencent Introduces Hy4 Flash Model with 224B Parameters and 12B Active Parameters
+08:18:24 Recycled the AI model after 40 stories to release accumulated memory
+08:19:12 drop 4/10  Real-time jazz partner uses pretrained music transformer without fine-tuning
+08:21:28 KEEP 10/10  Blue-harness measures AI-assisted reverse engineering defenses for native apps
+08:21:43 KEEP 10/10  vm2's deferred sandbox escapes and patching strategies
+08:21:55 KEEP 6/10  OpenAI's GPT-6 Astra and Luna Boost Healthcare Workflow Efficiency
+08:22:06 drop 0/10  OpenAI Dots Enhance Holiday Extras' Workflow Efficiency
+08:22:06 PC ran low on memory (0.1 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+08:22:57 KEEP 6/10  Hugging Face and OpenRouter partner to streamline open-weight model usage
+08:23:08 KEEP 8/10  Vim 'tagsecure' Bypass via Escaped URL in Tags File
+08:23:19 KEEP 8/10  Linux Kernel TCP Remote Corruption (CVE-2026-99288)
+08:23:27 drop 0/10  Multiplayer Game Uses World Model for Real-Time Rendering
+08:24:43 KEEP 10/10  Meta FAIR + NYU study finds vision parameters essential but pretraining optional
+08:25:13 KEEP 10/10  Basalt 0.4.0 releases Qwen 27B dense model with 776 tok/s speed
+08:26:10 drop 1/10  Marimba: Lightweight audio model for speech decisions
+08:29:12 KEEP 7/10  FortiClient 7.4.8.2066 kernel driver oob bug causes BSOD
+08:29:13 PC ran low on memory (0.1 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+08:29:59 drop 2/10  WorkOS Airlock Enables Fine-Grained Agent Access Control
+08:30:13 KEEP 10/10  Grok Apps Leak Internal Data and Default Access
+08:33:14 KEEP 7/10  Fireface UCX Linux Driver Reverse-Engineered with AI
+08:33:27 KEEP 10/10  AI Reconstructs Slack and Finder from Binaries
+08:33:41 KEEP 10/10  ARTEX AI Penetration Testing Framework in Cyberattacks
+08:34:46 KEEP 10/10  AI Penetration Testing Frameworks Surge, Straining Cyber Defenses
+08:35:15 KEEP 7/10  Cursor security incident: Unauthorized data access and malicious extension
+08:36:09 drop 2/10  Wilkins' malware infected video game downloads
+08:40:15 drop 0/10  EU Launches 1T-Parameter Open AI Model Europa
+08:40:24 drop 0/10  ICLR 2027 Acceptance Rate Likely to Drop Amid 42K Submissions
+08:40:38 KEEP 10/10  Lazarus Exploits Windows Kernel Zero-Day CVE-2026-68820
+08:40:52 KEEP 10/10  libdca DTS decoder has out-of-bounds read in scale-factor parsing
+08:41:00 KEEP 6/10  TimeCues Studio: Open-source tool for music annotation and algorithm comparison
+08:42:02 drop 4/10  Short-horizon price forecasting papers should benchmark against market-implied forecasts
+08:42:22 KEEP 10/10  Git ZIP ZIP Attack: Malicious Code via Git Hooks and Filters
+08:46:27 drop 0/10  BloodTrail optimizes BloodHound performance
+08:46:49 KEEP 10/10  Seep-Reverse-Lab 实现 AI Agent 自动化安全分析与逆向工程
+08:47:06 KEEP 10/10  45 自主式攻击框架分析：风险集中于基座项目
+08:48:00 drop 5/10  AgentTrap improves honeypot effectiveness against AI penetration agents
+08:48:11 drop 3/10  ARTEX Framework Enhances Autonomous Penetration Testing
+08:48:24 drop 0/10  AI's math breakthroughs signal imminent superintelligence
+08:48:35 drop 4/10  Generative AI Market Faces Bubble Burst as Valuations Drop
+08:49:45 drop 0/10  llama.cpp v1.0 released with desktop apps
+08:49:54 drop 0/10  Hugging Face releases llama.cpp v1.0.0 for lightweight local AI
+08:50:03 KEEP 8/10  Check Point Vulnerability Allows Root Access via Local Socket
+08:51:16 KEEP 6/10  Tholian Scout: Open-source inventory agent for UNIX systems
+08:51:25 KEEP 8/10  Home Assistant Passwords Don't Secure Tokens
+08:51:25 Recycled the AI model after 80 stories to release accumulated memory
+08:52:11 KEEP 8/10  InfiniteWP Client NOSSL Key Recovery Vulnerability
+08:52:17 drop 0/10  AI Code Analysis Evasion Techniques
+08:52:25 KEEP 7/10  Rucio SSH Token Misuse Allows Admin Impersonation
+08:52:32 drop 2/10  OWASP Identifies Top 10 Neocloud and AI Data Center Security Risks
+08:54:00 KEEP 10/10  ARTEX AI Penetration Framework Targets AWS Financial Data
+08:54:14 KEEP 10/10  Amplitude uses OpenAI models to ship product changes in 1–2 days
+08:54:29 KEEP 8/10  Hugging Face Introduces LLMON Markup Language for Better LLM Context Handling
+08:54:45 KEEP 8/10  Google Introduces Gemini 4 Hydrogen for Efficient AI Workflows
+08:54:57 KEEP 8/10  Microsoft fixes Aspire Dashboard unauthenticated telemetry deletion
+08:55:09 KEEP 10/10  UMAP 0.6 boosts speed and quality for large-scale data
+08:55:40 Finished: 62 new stories on the map
+20:00:03 Update started (update: last 3.0 days, up to 90 summaries)
+20:00:25 Skipping 6 feeds that failed 3 runs in a row (retried weekly): antirez.com, utcc.utoronto.ca/~cks, skyfall.dev, rachelbythebay.com, joanwestenberg.com, tedunangst.com
+20:00:27 Lobsters: 7 items (0 new)
+20:00:27 HF Papers: 20 items (11 new)
+20:00:28 r/netsec: 2 items (2 new)
+20:01:03 Hacker News: 91 items (17 new)
+20:01:13 r/ReverseEngineering: 19 items (5 new)
+20:01:17 Import AI: 1 items (0 new)
+20:01:17 OpenAI News: 14 items (3 new)
+20:01:19 Hugging Face Blog: 1 items (0 new)
+20:01:30 oss-security: 15 items (0 new)
+20:01:32 simonwillison.net: 9 items (1 new)
+20:01:33 jeffgeerling.com: 1 items (0 new)
+20:01:36 daringfireball.net: 16 items (0 new)
+20:01:38 idiallo.com: 1 items (0 new)
+20:01:42 pluralistic.net: 1 items (1 new)
+20:01:44 shkspr.mobi: 3 items (1 new)
+20:01:50 devblogs.microsoft.com/oldnewthing: 1 items (1 new)
+20:01:54 garymarcus.substack.com: 3 items (1 new)
+20:01:57 johndcook.com: 2 items (0 new)
+20:02:08 micahflee.com: 1 items (0 new)
+20:02:10 construction-physics.com: 1 items (0 new)
+20:02:14 entropicthoughts.com: 1 items (1 new)
+20:02:15 r/MachineLearning: 22 items (8 new)
+20:02:16 borretti.me: 1 items (0 new)
+20:02:17 wheresyoured.at: 1 items (1 new)
+20:02:19 dwarkesh.com: 1 items (0 new)
+20:02:19 geohot.github.io: 1 items (0 new)
+20:02:22 dfarq.homeip.net: 3 items (1 new)
+20:02:36 it-notes.dragas.net: 1 items (1 new)
+20:02:41 steveblank.com: 1 items (0 new)
+20:02:42 troyhunt.com: 1 items (0 new)
+20:03:31 ! chiark.greenend.org.uk/~sgtatham: timed out
+20:03:48 ! mjg59.dreamwidth.org: timed out
+20:04:30 r/LocalLLaMA: 17 items (5 new)
+20:05:14 r/blueteamsec: 20 items (5 new)
+20:05:14 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:05:54 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:06:14 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:06:35 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:07:15 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:07:35 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:08:15 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:08:35 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:09:15 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:10:56 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:11:16 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:18:18 PC is low on memory: 4.4 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:18:38 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:22:39 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:23:20 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:23:40 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:24:20 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:24:40 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:25:20 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:29:02 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:29:22 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:29:42 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:30:22 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:30:42 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:31:42 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:34:43 PC is low on memory: 4.4 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:35:03 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:36:24 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:36:44 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:37:04 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:37:44 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:38:04 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+20:38:24 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:00:13 PC is low on memory: 4.3 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:00:34 PC is low on memory: 3.3 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:00:54 PC is low on memory: 1.4 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:01:34 PC is low on memory: 1.3 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:01:54 PC is low on memory: 0.4 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:02:15 PC is low on memory: 2.1 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:02:35 PC is low on memory: 2.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:02:56 PC is low on memory: 1.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:03:16 PC is low on memory: 1.4 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:03:36 PC is low on memory: 1.3 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:03:56 GPU is busy with other apps: 5707 MB free, needs 5800 MB. Continues automatically.
+21:04:16 GPU is busy with other apps: 5685 MB free, needs 5800 MB. Continues automatically.
+21:04:36 GPU is busy with other apps: 5738 MB free, needs 5800 MB. Continues automatically.
+21:04:56 GPU is busy with other apps: 5739 MB free, needs 5800 MB. Continues automatically.
+21:05:16 GPU is busy with other apps: 5738 MB free, needs 5800 MB. Continues automatically.
+21:05:57 GPU is busy with other apps: 5707 MB free, needs 5800 MB. Continues automatically.
+21:06:17 GPU is busy with other apps: 5717 MB free, needs 5800 MB. Continues automatically.
+21:06:37 GPU is busy with other apps: 5705 MB free, needs 5800 MB. Continues automatically.
+21:06:57 GPU is busy with other apps: 5711 MB free, needs 5800 MB. Continues automatically.
+21:07:17 GPU is busy with other apps: 5679 MB free, needs 5800 MB. Continues automatically.
+21:07:37 GPU is busy with other apps: 5699 MB free, needs 5800 MB. Continues automatically.
+21:07:57 GPU is busy with other apps: 5747 MB free, needs 5800 MB. Continues automatically.
+21:08:17 GPU is busy with other apps: 5742 MB free, needs 5800 MB. Continues automatically.
+21:08:37 GPU is busy with other apps: 5740 MB free, needs 5800 MB. Continues automatically.
+21:08:58 GPU is busy with other apps: 5720 MB free, needs 5800 MB. Continues automatically.
+21:09:18 GPU is busy with other apps: 5730 MB free, needs 5800 MB. Continues automatically.
+21:09:38 GPU is busy with other apps: 5729 MB free, needs 5800 MB. Continues automatically.
+21:09:58 GPU is busy with other apps: 5726 MB free, needs 5800 MB. Continues automatically.
+21:10:18 GPU is busy with other apps: 5724 MB free, needs 5800 MB. Continues automatically.
+21:10:38 GPU is busy with other apps: 5708 MB free, needs 5800 MB. Continues automatically.
+21:10:58 GPU is busy with other apps: 5712 MB free, needs 5800 MB. Continues automatically.
+21:11:18 GPU is busy with other apps: 5694 MB free, needs 5800 MB. Continues automatically.
+21:11:38 GPU is busy with other apps: 5697 MB free, needs 5800 MB. Continues automatically.
+21:12:19 GPU is busy with other apps: 5696 MB free, needs 5800 MB. Continues automatically.
+21:12:39 GPU is busy with other apps: 5694 MB free, needs 5800 MB. Continues automatically.
+21:12:59 GPU is busy with other apps: 5699 MB free, needs 5800 MB. Continues automatically.
+21:13:19 GPU is busy with other apps: 5697 MB free, needs 5800 MB. Continues automatically.
+21:13:39 GPU is busy with other apps: 5701 MB free, needs 5800 MB. Continues automatically.
+21:13:59 GPU is busy with other apps: 5702 MB free, needs 5800 MB. Continues automatically.
+21:14:19 GPU is busy with other apps: 5699 MB free, needs 5800 MB. Continues automatically.
+21:14:59 GPU is busy with other apps: 5696 MB free, needs 5800 MB. Continues automatically.
+21:15:20 GPU is busy with other apps: 5693 MB free, needs 5800 MB. Continues automatically.
+21:15:40 GPU is busy with other apps: 5688 MB free, needs 5800 MB. Continues automatically.
+21:16:00 GPU is busy with other apps: 5689 MB free, needs 5800 MB. Continues automatically.
+21:16:20 GPU is busy with other apps: 5681 MB free, needs 5800 MB. Continues automatically.
+21:17:00 GPU is busy with other apps: 5679 MB free, needs 5800 MB. Continues automatically.
+21:17:40 GPU is busy with other apps: 5678 MB free, needs 5800 MB. Continues automatically.
+21:18:00 GPU is busy with other apps: 5683 MB free, needs 5800 MB. Continues automatically.
+21:18:20 GPU is busy with other apps: 5681 MB free, needs 5800 MB. Continues automatically.
+21:19:01 GPU is busy with other apps: 5678 MB free, needs 5800 MB. Continues automatically.
+21:19:21 GPU is busy with other apps: 5677 MB free, needs 5800 MB. Continues automatically.
+21:19:41 GPU is busy with other apps: 5684 MB free, needs 5800 MB. Continues automatically.
+21:20:01 GPU is busy with other apps: 5683 MB free, needs 5800 MB. Continues automatically.
+21:20:21 GPU is busy with other apps: 5681 MB free, needs 5800 MB. Continues automatically.
+21:20:41 GPU is busy with other apps: 5679 MB free, needs 5800 MB. Continues automatically.
+21:21:42 GPU is busy with other apps: 5677 MB free, needs 5800 MB. Continues automatically.
+21:22:02 GPU is busy with other apps: 5676 MB free, needs 5800 MB. Continues automatically.
+21:22:22 GPU is busy with other apps: 5678 MB free, needs 5800 MB. Continues automatically.
+21:22:42 GPU is busy with other apps: 5676 MB free, needs 5800 MB. Continues automatically.
+21:23:02 GPU is busy with other apps: 5675 MB free, needs 5800 MB. Continues automatically.
+21:23:42 GPU is busy with other apps: 5673 MB free, needs 5800 MB. Continues automatically.
+21:24:22 GPU is busy with other apps: 5671 MB free, needs 5800 MB. Continues automatically.
+21:24:42 GPU is busy with other apps: 5672 MB free, needs 5800 MB. Continues automatically.
+21:25:03 GPU is busy with other apps: 5674 MB free, needs 5800 MB. Continues automatically.
+21:25:23 GPU is busy with other apps: 5671 MB free, needs 5800 MB. Continues automatically.
+21:25:43 GPU is busy with other apps: 5665 MB free, needs 5800 MB. Continues automatically.
+21:26:03 GPU is busy with other apps: 5664 MB free, needs 5800 MB. Continues automatically.
+21:26:23 GPU is busy with other apps: 5649 MB free, needs 5800 MB. Continues automatically.
+21:26:43 GPU is busy with other apps: 5660 MB free, needs 5800 MB. Continues automatically.
+21:27:03 GPU is busy with other apps: 5661 MB free, needs 5800 MB. Continues automatically.
+21:27:23 GPU is busy with other apps: 5659 MB free, needs 5800 MB. Continues automatically.
+21:27:43 GPU is busy with other apps: 5656 MB free, needs 5800 MB. Continues automatically.
+21:28:04 GPU is busy with other apps: 5665 MB free, needs 5800 MB. Continues automatically.
+21:28:24 GPU is busy with other apps: 5666 MB free, needs 5800 MB. Continues automatically.
+21:28:44 GPU is busy with other apps: 5663 MB free, needs 5800 MB. Continues automatically.
+21:29:05 GPU is busy with other apps: 5661 MB free, needs 5800 MB. Continues automatically.
+21:29:25 GPU is busy with other apps: 5659 MB free, needs 5800 MB. Continues automatically.
+21:29:45 GPU is busy with other apps: 5650 MB free, needs 5800 MB. Continues automatically.
+21:30:05 GPU is busy with other apps: 5660 MB free, needs 5800 MB. Continues automatically.
+21:30:25 GPU is busy with other apps: 5659 MB free, needs 5800 MB. Continues automatically.
+21:30:45 GPU is busy with other apps: 5665 MB free, needs 5800 MB. Continues automatically.
+21:31:05 GPU is busy with other apps: 5661 MB free, needs 5800 MB. Continues automatically.
+21:31:26 GPU is busy with other apps: 5660 MB free, needs 5800 MB. Continues automatically.
+21:31:46 GPU is busy with other apps: 5658 MB free, needs 5800 MB. Continues automatically.
+21:32:06 GPU is busy with other apps: 5659 MB free, needs 5800 MB. Continues automatically.
+21:32:26 GPU is busy with other apps: 5658 MB free, needs 5800 MB. Continues automatically.
+21:32:46 GPU is busy with other apps: 5655 MB free, needs 5800 MB. Continues automatically.
+21:33:06 GPU is busy with other apps: 5665 MB free, needs 5800 MB. Continues automatically.
+21:33:26 GPU is busy with other apps: 5661 MB free, needs 5800 MB. Continues automatically.
+21:33:47 GPU is busy with other apps: 5659 MB free, needs 5800 MB. Continues automatically.
+21:34:07 GPU is busy with other apps: 5657 MB free, needs 5800 MB. Continues automatically.
+21:34:27 GPU is busy with other apps: 5656 MB free, needs 5800 MB. Continues automatically.
+21:34:47 GPU is busy with other apps: 5654 MB free, needs 5800 MB. Continues automatically.
+21:35:07 GPU is busy with other apps: 5677 MB free, needs 5800 MB. Continues automatically.
+21:35:27 GPU is busy with other apps: 5679 MB free, needs 5800 MB. Continues automatically.
+21:35:48 GPU is busy with other apps: 5678 MB free, needs 5800 MB. Continues automatically.
+21:36:08 GPU is busy with other apps: 5676 MB free, needs 5800 MB. Continues automatically.
+21:36:28 GPU is busy with other apps: 5666 MB free, needs 5800 MB. Continues automatically.
+21:36:48 GPU is busy with other apps: 5684 MB free, needs 5800 MB. Continues automatically.
+21:37:08 GPU is busy with other apps: 5681 MB free, needs 5800 MB. Continues automatically.
+21:37:28 GPU is busy with other apps: 5680 MB free, needs 5800 MB. Continues automatically.
+21:38:09 GPU is busy with other apps: 5669 MB free, needs 5800 MB. Continues automatically.
+21:38:29 GPU is busy with other apps: 5682 MB free, needs 5800 MB. Continues automatically.
+21:38:49 GPU is busy with other apps: 5676 MB free, needs 5800 MB. Continues automatically.
+21:39:09 GPU is busy with other apps: 5672 MB free, needs 5800 MB. Continues automatically.
+21:39:29 PC is low on memory: 4.1 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:39:49 PC is low on memory: 3.8 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:40:10 PC is low on memory: 3.9 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:40:30 PC is low on memory: 3.8 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:40:50 PC is low on memory: 3.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:41:10 PC is low on memory: 4.2 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:41:30 PC is low on memory: 4.1 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:41:50 PC is low on memory: 4.0 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:42:10 PC is low on memory: 4.1 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:42:30 PC is low on memory: 4.2 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:42:51 PC is low on memory: 3.9 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:43:11 PC is low on memory: 4.0 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:43:31 PC is low on memory: 4.1 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:43:51 PC is low on memory: 4.0 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:44:31 PC is low on memory: 4.1 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:46:32 PC is low on memory: 4.4 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:47:12 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:47:32 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:47:52 PC is low on memory: 4.5 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:48:33 PC is low on memory: 4.6 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:53:14 PC is low on memory: 4.7 GB free, needs 4.7 GB to load the AI model. Waiting so your other apps don't crash. Continues automatically.
+21:53:34 Resources are free again, continuing
+21:55:52 Expired 12 older backlog items (older than 7 days, headline interest below 8)
+21:56:02 KEEP 8/10  K2-Horizon Introduces 6 Open Source Language Models for General-Purpose Reasoning
+21:56:12 KEEP 8/10  AI Paper Reviewer Outperforms Humans in Soundness Evaluation
+21:56:22 KEEP 8/10  Mobile AI Factory creates task-specific SLMs for phones
+21:56:38 KEEP 8/10  Sign2Shell: Brazil's Digital Signatures Vulnerable to Zero-Click RCE
+21:57:03 drop 2/10  Megabank's Platform Standardization Efforts
+21:57:20 drop 5/10  Anthropic's Financial Ties Fuel AI Regulatory Capture
+21:57:35 KEEP 10/10  Claude Code Team Uses Verification Loops to Improve Code Quality
+21:57:51 KEEP 6/10  Lend enables secure credential delegation for coding agents
+21:58:01 drop 3/10  Sage S1.5 Flash excels in scientific reasoning and tool use benchmarks
+21:58:11 KEEP 6/10  SPILLWAY defends AI agents against prompt injection by separating target admission from sa
+21:58:20 KEEP 6/10  SWE-CoWork reveals coding agents struggle with requirement tracking in software engineerin
+21:58:28 KEEP 8/10  ScaleVLA: 552B VLM boosts robot control with 10 demos
+21:58:36 KEEP 8/10  G-CAST improves e-commerce agents with continual self-training for evolving demands
+21:58:49 KEEP 8/10  ZNP Z01 AI badge reverse-engineered for custom AI integration
+22:00:03 KEEP 7/10  Honor Pad X8A secure boot chain fully reverse-engineered
+22:03:17 drop 4/10  Glasswing's vulnerability findings show high duplication and low fixes
+22:03:24 drop 1/10  ICLR 2027: AI review detection highlights disclosure issues
+22:03:40 KEEP 10/10  iPhone Exploit Linked to BBC, Zoom, and Other Sites via Poisoned Scripts
+22:04:49 drop 4/10  621k Paper Changes Show 26% Unhelpful, 69% Helped
+22:05:18 drop 4/10  Open-weight models match closed models in CTI-REALM benchmark
+22:06:20 KEEP 7/10  Apache mod_http2 race condition (CVE-2026-119618) affects 2.4.55-70
+22:10:30 KEEP 6/10  Maxwell-V1-Flash: High-Performance MoE Model with 35B Parameters
+22:10:42 KEEP 6/10  miHoYo Gamer: Real-Time Game Agent with 30 Hz Control
+22:10:50 drop 1/10  Open weight models now 30% of enterprise AI usage
+22:11:04 KEEP 8/10  AI Marketplace Turns Stolen Computer Data into Searchable Profiles
+22:15:11 drop 4/10  Eye Security Defends Against AI-Driven ARTEX Attack
+22:15:22 drop 2/10  Google Launches Gemini Decision API with Multi-Model Support
+22:15:29 KEEP 7/10  AWS Launches Official Emulator for Local Testing
+22:15:44 KEEP 7/10  Qilin Ransomware Group Linked to Russian Man via Multiple Cybercrime Identities
+22:15:54 KEEP 7/10  LLM 0.37.2 Fixes OpenAI API Key Leak
+22:15:59 drop 2/10  DeepMind's AlphaGenome 2 advances DNA reading mechanisms for disease insights
+22:16:10 KEEP 6/10  Tokyo Police Arrest Chinese Man for SMS Blaster Scam Targeting Tourists
+22:16:28 KEEP 8/10  Hugging Face Introduces BotPsy: 0.8B-Parameter On-Device AI Assistant
+22:16:34 drop 0/10  Anthropic researchers cited more than OpenAI in ML papers
+22:16:43 drop 1/10  Glue Work Still Lingers Despite AI Adoption
+22:16:53 KEEP 6/10  React Server Components RCE in CVE-2026-126187
+22:17:03 drop 0/10  Google Launches Gemini 4 Carbon with AI-Generated 3D Game
+22:18:16 KEEP 8/10  NTLMv1-SSP Hashes Cracked via Rainbow Tables in Windows Server 2022
+22:18:25 KEEP 8/10  Mongoose Critical Vulnerability: sanitizeFilter Missing in countDocuments
+22:19:42 KEEP 8/10  Time-series models fail to beat simple baselines in stock prediction
+22:19:42 Recycled the AI model after 40 stories to release accumulated memory
+22:20:35 KEEP 10/10  Google DeepMind launches Gemini 4 Carbon for advanced AI tasks and cybersecurity
+22:21:18 KEEP 8/10  Coway Air Purifier Cloud Ditching via Reverse Engineering
+22:21:28 drop 4/10  Claude Services Experience Elevated Errors and Authentication Issues
+22:21:37 drop 0/10  AI undermines trust in human writers and readers
+22:21:54 KEEP 10/10  Voltage glitching unlocks full A100 capabilities on mining cards
+22:22:08 KEEP 10/10  Positional Embeddings in LLMs Explained
+22:22:18 drop 0/10  Baron: WebGL Flight Simulator with Procedural Terrain
+22:22:27 drop 0/10  Claude Service Outage Disrupts User Workflows
+22:22:37 drop 4/10  Microsoft outage highlights cloud dependency risks
+22:22:47 KEEP 10/10  Debian Kernel 6.1.0-55 Update Causes System Unresponsiveness
+22:23:03 KEEP 8/10  Black Ops II Runs Native on Apple M1 via Static Recompilation
+22:23:16 drop 0/10  Tailscale's DNS IPv6 spells out 'Tailscale'
+22:23:34 KEEP 10/10  Spamhaus Enforces Strict Email Sender Requirements Starting November 2026
+22:23:47 drop 2/10  AI Integration in Software Engineering: Why Shipping Isn't Faster Yet
+22:23:58 drop 4/10  Aristotle Adds Rust Verification for Critical Code
+22:24:18 KEEP 8/10  AI-Trained Blood Glucose Forecasting Models Outperform Some Benchmarks
+22:24:33 KEEP 8/10  Stanford and 10+ Universities Drop Flock Camera Contracts Over Privacy Concerns
+22:24:43 KEEP 8/10  InclusionMed benchmarks reveal AI healthcare models vary by role and cost
+22:24:52 KEEP 7/10  RoboScript Achieves 83.4% Success in Robot Manipulation with One Demonstration
+22:25:23 KEEP 7/10  PhysLoop Uses LLMs to Improve Video Generation with Physical Consistency
+22:25:32 drop 4/10  Benchmark Reveals Tabular Models' Strengths in Generation, Imputation, and Prediction
+22:25:42 KEEP 7/10  Open Vision Banana: Open-source Generative Vision Model Surpasses Previous Performance
+22:25:53 KEEP 6/10  Ropedia Xperience 2 Sets New Standard for Physical AI Data
+22:26:01 KEEP 8/10  SimpleHC Simplifies Hyper-Connections for Efficient Language Models
+22:26:12 KEEP 7/10  V-JEPA-LM video models outperform open LLMs in motion understanding
+22:26:20 KEEP 6/10  Loopback Transformer reduces parameters while improving accuracy
+22:26:30 KEEP 6/10  VoxMel TTS Framework Achieves High-Fidelity Speech Synthesis
+22:26:45 KEEP 8/10  Intel's D270 GPU Outperforms RTX PRO 6000 in FP64 and AI Workloads
+22:27:55 KEEP 8/10  Reject Direct Send Now Generally Available in Exchange Online
+22:28:05 KEEP 7/10  OpenAI's AI boosts NATO and EU cyber defenses with Daybreak tool
+22:28:14 KEEP 8/10  LLM 0.37.3 Fixes SQLite Logging Bug
+22:29:22 KEEP 6/10  Qwen Release Schedule by Weekday
+22:29:31 drop 1/10  macOS 27.3 Introduces Granular Privacy Controls for Full Disk Access
+22:29:43 KEEP 7/10  GPAC/MP4Box NULL Pointer Dereference in MPEG-2 TS Input
+22:29:56 KEEP 8/10  littlefs Type Confusion Bug in v1 Image Migration
+22:30:08 KEEP 8/10  Apache WSS4J replay protection bypassed by concurrent message copies
+22:30:17 drop 0/10  Nvidia Ends Open-Checkbook Era for AI Economy
+22:30:30 KEEP 7/10  OpenAI expands ChatGPT access for 200,000 researchers
+22:30:44 KEEP 8/10  Revolut leverages OpenAI models to boost efficiency and FinCrime detection
+22:30:56 KEEP 10/10  OpenAI Launches Embedded Assessments with Four Independent Partners
+22:30:56 Recycled the AI model after 80 stories to release accumulated memory
+22:31:45 drop 5/10  OpenAI Expands Healthcare AI Tools with New Plugins and Agents
+22:31:57 KEEP 8/10  Barracuda XDR Credentials Compromised via Third-Party GitHub Exposure
+22:31:57 PC ran low on memory (0.1 GB free): released the AI model so other apps have room. Will reload when memory frees up.
+22:32:44 KEEP 7/10  Datasette 0.65.6 Security Fix Resolves Route-Name Mismatch Vulnerability
+22:32:58 KEEP 6/10  Top 2026 Command and Control Tools for Red Team Operations
+22:33:14 KEEP 10/10  ARTEX AI-Powered Attack Detection Signatures Released
+22:34:08 drop 0/10  Rasa and Open LLMs Face Chaos from Regulatory and Security Shifts
+22:34:17 drop 0/10  Websites offer different versions based on visitor type
+22:34:24 drop 2/10  Datasette Agent 0.6a0 adds homepage agent prompt with hash-mentions
+22:34:34 KEEP 7/10  libdca DTS decoder has out-of-bounds read in scale-factor parsing
+22:35:44 drop 2/10  Frontier models haven't shown significant raw intelligence gains
+22:36:09 Finished: 60 new stories on the map
