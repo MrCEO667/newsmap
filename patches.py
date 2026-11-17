@@ -28,7 +28,7 @@ import db
 import net
 
 ID_RE = re.compile(r"\b(CVE-\d{4}-\d{4,7}|GHSA(?:-[23456789cfghjmpqrvwx]{4}){3})\b", re.I)
-VULN_CATEGORIES = {"Vulnerabilities & exploits"}
+VULN_CATEGORIES = set(C.CATEGORY_NAMES) | {"Vulnerabilities & exploits"}   # the whole map is about flaws now
 RECHECK_H = 12
 RECHECK_DAYS = 60
 MAX_IDS = 6                    # a story listing 40 CVEs: check the first few

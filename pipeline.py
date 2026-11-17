@@ -30,7 +30,7 @@ import sources as S
 STAGES = [("collect", "Collect sources"), ("triage", "Filter noise (headline check)"),
           ("summarize", "Read & summarize"), ("patches", "Check for fixes"), ("map", "Place on map")]
 DEFAULT_AVG = {"collect_task": 2.0, "triage_item": 1.0, "summarize_item": 22.0, "pass_rate": 0.15}
-ALL_SOURCES = ["hn", "lobsters", "reddit", "hf", "kev", "ghsa", "rss"]
+ALL_SOURCES = list(C.SOURCES)
 
 
 class StopRun(Exception):
@@ -276,16 +276,16 @@ def stage_collect(c, P, since, now, only):
 
 
 # ============================================================== stage 2
-TRIAGE_SYS = """You are the strict front-page editor of a private intelligence briefing for a professional who follows AI and cybersecurity and wants to learn important things EARLY, before they reach YouTube or mainstream news.
+TRIAGE_SYS = """You are the strict editor of a private VULNERABILITY tracker: news about security flaws (vulnerabilities) and exploits, for someone who wants to know early which software is broken and whether it's fixed.
 
 For the item decide:
-- relevant: true only if it is mainly about AI/ML (models, research, agents, AI products, AI industry/policy, compute) or cybersecurity/privacy (vulnerabilities, exploits, malware, threat actors, breaches, security research/tools, surveillance). General programming, science, politics, business or culture news is NOT relevant unless AI or security is its core.
-- category: the best fitting category.
-- interest (0-10), judged by information value, not popularity:
-  9-10: major and new: frontier model release, critical 0-day exploited in the wild, landmark paper, major breach, important leak.
-  7-8: solid new technical information: original research, detailed write-up, notable release, credible first-hand account.
-  5-6: useful but incremental, niche, or a re-report of known news.
-  0-4: noise: memes, jokes, rants, hot takes without new facts, beginner tutorials, career or 'Ask' questions, marketing, listicles, corporate gossip/drama, space/science/politics news, speculation.
+- relevant: true ONLY if the item is mainly about a specific security flaw or exploit: a vulnerability, CVE, security bug, zero-day, patch/security update, proof-of-concept exploit, exploitation in the wild, or a technical write-up on finding/exploiting flaws. Everything else is NOT relevant: general AI news, company/industry news, breaches without a described flaw, malware campaigns without a flaw, privacy/policy stories, opinion, tools, tutorials, career posts.
+- category: what is affected (pick the best one).
+- interest (0-10), judged by how important and new the flaw is:
+  9-10: actively exploited or zero-day in widely used software, critical remote takeover, emergency patch.
+  7-8: serious flaw in popular software, detailed original write-up, working public exploit.
+  5-6: minor or niche product, low impact, or a re-report of known news.
+  0-4: not really about a specific flaw, vague, marketing, listicles.
 Be strict: most items should score 6 or lower."""
 
 TRIAGE_SCHEMA = {"type": "object", "required": ["relevant", "category", "interest"], "properties": {
@@ -349,13 +349,16 @@ Fields:
 - insider_notes: 0-4 bullets of genuinely useful expert insight from the discussion comments (corrections, first-hand experience, caveats, informed skepticism, extra context). Empty list if the discussion adds nothing.
 - entities: key companies, products, models, CVE IDs, threat actors, people.
 - tags: 3-6 short lowercase topic tags.
-- category: the MOST SPECIFIC fitting category:
-  AI models & releases = a new model/version/benchmark result; AI research = papers, methods, findings;
-  AI agents & tools = agent frameworks, coding assistants, AI dev tools; AI safety & security = jailbreaks, prompt injection, alignment, attacks on/with AI;
-  AI industry & policy = companies, funding, regulation, business moves; Compute & hardware = GPUs, chips, datacenters, inference hardware;
-  Vulnerabilities & exploits = a specific flaw, CVE, bug, RCE, bypass or exploit; Malware & threat actors = malware, ransomware, APT groups, campaigns;
-  Breaches & incidents = a company/org was hacked, leaked data or had an outage from an attack; Security research & tools = defensive tools, techniques, research that is not one specific vulnerability;
-  Privacy & surveillance = tracking, spyware, data collection, government surveillance; Other tech = none of the above.
+- category: what is affected (the MOST SPECIFIC fit):
+  Browsers & phones = Chrome, Safari, Firefox, Edge, iOS, Android and apps on phones;
+  Windows, Mac & Linux = operating systems and their built-in parts (kernel, drivers, system services);
+  Hardware & smart devices = CPUs, chips, firmware, home routers, cameras, IoT, cars, printers;
+  Network & VPN gear = business firewalls, VPN gateways, enterprise routers/switches, load balancers (Cisco, Fortinet, Palo Alto, Ivanti, SonicWall...);
+  Business & cloud software = Exchange, SharePoint, SAP, Active Directory, identity/SSO, file-transfer and backup products, SaaS and cloud platforms;
+  Websites & web servers = WordPress and plugins, CMS, web frameworks, web servers, web apps;
+  Open-source code & packages = libraries, npm/PyPI/Go/Rust packages, developer tools, supply-chain attacks;
+  AI tools & models = flaws in AI apps, agents, AI coding tools, model servers, prompt injection;
+  Exploit techniques & research = methods, tools and research about finding/exploiting flaws, not about one product.
 - value_reason: one short sentence on what makes this valuable (or weak) for that expert."""
 
 # Value = weighted yes/no checklist, asked in a separate short call. Small models collapse onto

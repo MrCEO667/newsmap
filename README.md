@@ -1,5 +1,7 @@
 # NewsMap
 
+**Focus: security flaws (vulnerabilities) and exploits only.** Stories are grouped by what is affected: browsers & phones, Windows/Mac/Linux, hardware & smart devices, network & VPN gear, business & cloud software, websites & web servers, open-source code & packages, AI tools & models, and exploit techniques & research. Older AI and general stories are hidden (category "Not a vulnerability"; the original topic is kept inside each story's summary).
+
 A local 3D map of early AI and cybersecurity news. A local model (Qwen3-8B via Ollama) filters out noise and writes a one-page brief for each story worth reading.
 
 **Open it:** double-click `NewsMap.cmd` (or go to http://127.0.0.1:8765 while the server runs).

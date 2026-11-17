@@ -25,7 +25,10 @@ import patches
 import pipeline as PL
 
 CACHE = os.path.join(C.DATA_DIR, "agent_cache")
-BATCH = {"triage": 20, "summarize": 3, "fixcheck": 3}
+BATCH = {"triage": 20, "resort": 20, "summarize": 3, "fixcheck": 3}
+NOT_VULN = "Not a vulnerability"     # category for old stories that aren't about a flaw (hidden from the map)
+RESORT_FROM = {"Vulnerabilities & exploits", "Security research & tools", "Privacy & surveillance",
+               "AI safety & security", "Malware & threat actors", "Breaches & incidents"}
 TEXT_CAP = 7000        # characters of article+comments per story handed to the session
 
 
@@ -65,11 +68,19 @@ def fixcheck_rows(c, now, n):
     return rows[:n], len(rows)
 
 
+def resort_rows(c, n):
+    """Stories from before the focus change: security topics, plus anything else that names a CVE."""
+    rows = c.execute("SELECT * FROM items WHERE status IN ('done','low') AND category IN (%s) ORDER BY created_at DESC"
+                     % ",".join("?" * len(C.LEGACY_CATEGORIES)), C.LEGACY_CATEGORIES).fetchall()
+    rows = [r for r in rows if r["category"] in RESORT_FROM or patches.ids_for(r)]
+    return rows[:n], len(rows)
+
+
 def counts(c, now):
     t = c.execute("SELECT COUNT(*) FROM items WHERE status='new' AND created_at>=?", (window(now),)).fetchone()[0]
     s = c.execute("SELECT COUNT(*) FROM items WHERE status='triaged' AND created_at>=?", (window(now),)).fetchone()[0]
     f = fixcheck_rows(c, now, 0)[1]
-    return {"triage": t, "summarize": s, "fixcheck": f}
+    return {"triage": t, "resort": resort_rows(c, 0)[1], "summarize": s, "fixcheck": f}
 
 
 # ---------------------------------------------------------------- material (cached so retries are instant)
@@ -149,6 +160,15 @@ Answer:
 {{"kind": "triage", "answers": [{{"id": "...", "relevant": true, "category": "Vulnerabilities & exploits", "interest": 7}}, ...]}}
 Only items that are relevant AND interest >= {C.TRIAGE_MIN_INTEREST} go on to be summarized.
 
+## 1b. resort (batches of {BATCH['resort']} older stories, headline + short summary)
+NewsMap now tracks ONLY security flaws (vulnerabilities) and exploits. For each older story decide:
+- vulnerability: true only if it is mainly about a specific security flaw or exploit (a vulnerability, CVE,
+  security bug, zero-day, patch, exploit, or a technical write-up on finding/exploiting flaws). Otherwise false.
+- category (only when vulnerability is true): what is affected, one of the categories above.
+
+Answer:
+{{"kind": "resort", "answers": [{{"id": "...", "vulnerability": true, "category": "Network & VPN gear"}}, {{"id": "...", "vulnerability": false}}]}}
+
 ## 2. summarize (batches of {BATCH['summarize']} full stories)
 {PL.SUM_SYS}
 
@@ -189,6 +209,14 @@ def cmd_next(kind=None):
                     msg += "\n" + PL.snip(r["snippet"], 300)
                 tasks.append({"id": r["id"], "input": msg})
             return out({"kind": "triage", "todo": counts(c, now), "tasks": tasks})
+    if kind in (None, "resort"):
+        rows, _ = resort_rows(c, BATCH["resort"])
+        if rows:
+            tasks = []
+            for r in rows:
+                sm = json.loads(r["summary"] or "{}")
+                tasks.append({"id": r["id"], "input": f"{sm.get('headline') or r['title']}\n{sm.get('tldr', '')}"})
+            return out({"kind": "resort", "todo": counts(c, now), "tasks": tasks})
     if kind in (None, "summarize"):
         rows = summarize_rows(c, now, BATCH["summarize"])
         if rows:
@@ -231,6 +259,21 @@ def submit_triage(c, a):
     c.execute("UPDATE items SET relevant=?, category=?, interest=?, status=? WHERE id=?",
               (int(rel), a["category"], interest, "triaged" if ok else "rejected", r["id"]))
     return "triaged" if ok else "rejected"
+
+
+def submit_resort(c, a):
+    r = _row(c, a["id"])
+    if not r or r["category"] not in C.LEGACY_CATEGORIES:
+        return "not waiting for re-sorting"
+    if not a.get("vulnerability"):
+        c.execute("UPDATE items SET category=? WHERE id=?", (NOT_VULN, r["id"]))
+        return "hidden (not about a flaw)"
+    if a.get("category") not in C.CATEGORY_NAMES:
+        return f"category must be one of {C.CATEGORY_NAMES}"
+    sm = json.loads(r["summary"] or "{}")
+    sm["category"] = a["category"]
+    c.execute("UPDATE items SET category=?, summary=? WHERE id=?", (a["category"], json.dumps(sm), r["id"]))
+    return "moved to " + a["category"]
 
 
 def submit_summarize(c, a):
@@ -288,9 +331,9 @@ def cmd_submit():
     except ValueError as e:
         return out({"error": f"not valid JSON: {e}"})
     kind = d.get("kind")
-    fn = {"triage": submit_triage, "summarize": submit_summarize, "fixcheck": submit_fixcheck}.get(kind)
+    fn = {"triage": submit_triage, "resort": submit_resort, "summarize": submit_summarize, "fixcheck": submit_fixcheck}.get(kind)
     if not fn:
-        return out({"error": "kind must be triage, summarize or fixcheck"})
+        return out({"error": "kind must be triage, resort, summarize or fixcheck"})
     c = conn()
     res = {}
     for a in d.get("answers") or []:

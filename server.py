@@ -90,6 +90,8 @@ def graph():
     pst = patches.all_status(c)
     c.close()
     nodes, vecs, vidx = [], [], []
+    names = set(C.CATEGORY_NAMES)
+    rows = [r for r in rows if r["category"] in names]   # only vulnerability stories (old topics are hidden)
     for r in rows:
         s = json.loads(r["summary"])
         srcs = json.loads(r["sources"])
