@@ -397,7 +397,7 @@ function scoreRing(v, color) {
 function renderList() {
   const vis = sortedVisible();
   $('#count').textContent = vis.length;
-  const list = $('#list');
+  const list = $('#list'), keepScroll = listAnim ? 0 : list.scrollTop;
   list.classList.toggle('anim', listAnim && !reduceMotion);
   list.innerHTML = vis.length ? vis.slice(0, 250).map((n, i) => `
     <div class="row ${n.id === selectedId ? 'sel' : ''}" data-id="${esc(n.id)}" style="--c:${colorOf(n)};--i:${i}">
@@ -405,6 +405,7 @@ function renderList() {
       <div><div class="t">${isNew(n) ? '<span class="new">NEW</span>' : ''}${fixBadge(n.p, n.x)}${esc(n.t)}</div>
       <div class="m">${esc(n.s.join(' · '))} · ${ago(n.d)}</div></div>
     </div>`).join('') : `<div class="empty-list">${data.nodes.length ? 'Nothing matches these filters' : 'Waiting for the first signals…'}</div>`;
+  if (keepScroll) list.scrollTop = keepScroll;
   listAnim = false;
 }
 $('#list').addEventListener('click', e => { const r = e.target.closest('.row'); if (r) { stopBrief(); openItem(r.dataset.id, true); } });
@@ -685,7 +686,10 @@ $('#pStop').onclick = () => {
 };
 let missionHidden = false;
 $('#pHide').onclick = e => { e.stopPropagation(); missionHidden = true; $('#mission').classList.add('hidden'); };
-$('#mcHead').onclick = () => $('#mission').classList.toggle('collapsed');
+$('#mcHead').onclick = () => {
+  const open = !$('#mission').classList.toggle('collapsed');
+  try { localStorage.setItem('nm_missionOpen', open ? '1' : '0'); } catch (e) {}
+};
 $('#statusPill').onclick = () => { missionHidden = false; if (lastStatus?.run) { $('#mission').classList.remove('hidden', 'collapsed'); } };
 
 /* =====================================================================
@@ -727,6 +731,10 @@ function renderStatus(st) {
   }
   const m = $('#mission');
   if (!run || missionHidden || (!st.running && !wasRunning && m.classList.contains('hidden'))) { if (!run || missionHidden) m.classList.add('hidden'); return; }
+  if (m.classList.contains('hidden')) {   // appearing: start as one compact line so the Signal feed stays readable
+    let open = false; try { open = localStorage.getItem('nm_missionOpen') === '1'; } catch (e) {}
+    m.classList.toggle('collapsed', !open);
+  }
   m.classList.remove('hidden');
   m.className = m.className.replace(/\b(running|waiting|paused|done|failed|stopped|interrupted)\b/g, '').trim() + ' ' + run.state;
 
