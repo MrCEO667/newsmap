@@ -25,7 +25,7 @@ import patches
 import pipeline as PL
 
 CACHE = os.path.join(C.DATA_DIR, "agent_cache")
-BATCH = {"triage": 20, "resort": 20, "summarize": 3, "fixcheck": 3}
+BATCH = {"triage": 20, "resort": 20, "summarize": 3, "rewrite": 3, "fixcheck": 3}
 NOT_VULN = "Not a vulnerability"     # category for old stories that aren't about a flaw (hidden from the map)
 RESORT_FROM = {"Vulnerabilities & exploits", "Security research & tools", "Privacy & surveillance",
                "AI safety & security", "Malware & threat actors", "Breaches & incidents"}
@@ -76,11 +76,20 @@ def resort_rows(c, n):
     return rows[:n], len(rows)
 
 
+def rewrite_rows(c, n):
+    """Stories on the map whose brief was written by the old local model: rewrite them in plain English."""
+    rows = c.execute("SELECT * FROM items WHERE status IN ('done','low') AND category IN (%s) "
+                     "AND instr(summary, '\"by\": \"claude\"')=0 ORDER BY status='low', value_score DESC, created_at DESC"
+                     % ",".join("?" * len(C.CATEGORY_NAMES)), C.CATEGORY_NAMES).fetchall()
+    return rows[:n], len(rows)
+
+
 def counts(c, now):
     t = c.execute("SELECT COUNT(*) FROM items WHERE status='new' AND created_at>=?", (window(now),)).fetchone()[0]
     s = c.execute("SELECT COUNT(*) FROM items WHERE status='triaged' AND created_at>=?", (window(now),)).fetchone()[0]
     f = fixcheck_rows(c, now, 0)[1]
-    return {"triage": t, "resort": resort_rows(c, 0)[1], "summarize": s, "fixcheck": f}
+    return {"triage": t, "resort": resort_rows(c, 0)[1], "summarize": s, "rewrite": rewrite_rows(c, 0)[1],
+            "fixcheck": f}
 
 
 # ---------------------------------------------------------------- material (cached so retries are instant)
@@ -183,6 +192,11 @@ Answer:
   "checks": {{{", ".join(f'"{k}": false' for k in checks)}}}}}]}}
 If a story's material is empty or unusable, answer {{"id": "...", "skip": true}} for it.
 
+## 2b. rewrite (batches of {BATCH['rewrite']} older stories)
+These stories already have a brief from an older, weaker AI model. Write a NEW brief from the given material,
+exactly like 'summarize' (same fields, plain English, glossary, checks), but answer with "kind": "rewrite".
+If the material is empty or unusable, answer {{"id": "...", "skip": true}} (the old brief is kept).
+
 ## 3. fixcheck (batches of {BATCH['fixcheck']} vulnerability stories)
 {patches.AI_SYS}
 verdict is one of: {json.dumps(patches.AI_SCHEMA['properties']['verdict']['enum'])}
@@ -221,6 +235,12 @@ def cmd_next(kind=None):
         rows = summarize_rows(c, now, BATCH["summarize"])
         if rows:
             return out({"kind": "summarize", "todo": counts(c, now),
+                        "tasks": [{"id": r["id"], "input": summarize_input(r)} for r in rows]})
+    if kind in (None, "rewrite"):
+        rows, _ = rewrite_rows(c, BATCH["rewrite"])
+        if rows:
+            return out({"kind": "rewrite", "how": "Same rules and answer format as 'summarize' (guide section 2), "
+                        "but use \"kind\": \"rewrite\". Plain English + glossary.", "todo": counts(c, now),
                         "tasks": [{"id": r["id"], "input": summarize_input(r)} for r in rows]})
     if kind in (None, "fixcheck"):
         rows, _ = fixcheck_rows(c, now, BATCH["fixcheck"])
@@ -276,9 +296,21 @@ def submit_resort(c, a):
     return "moved to " + a["category"]
 
 
-def submit_summarize(c, a):
+def submit_rewrite(c, a):
     r = _row(c, a["id"])
-    if not r or r["status"] != "triaged":
+    if not r or r["status"] not in ("done", "low"):
+        return "not waiting for a rewrite"
+    if a.get("skip"):     # article gone: keep the old brief, but mark it so it isn't handed out again
+        sm = json.loads(r["summary"] or "{}")
+        sm["by"] = "claude-skipped"
+        c.execute("UPDATE items SET summary=? WHERE id=?", (json.dumps(sm), r["id"]))
+        return "kept old brief"
+    return submit_summarize(c, a, rewrite=True)
+
+
+def submit_summarize(c, a, rewrite=False):
+    r = _row(c, a["id"])
+    if not r or (r["status"] != "triaged" and not rewrite):
         return "not waiting for a summary"
     if a.get("skip"):
         c.execute("UPDATE items SET attempts=attempts+1, error='skipped by agent', status=CASE WHEN attempts>=1 "
@@ -299,8 +331,12 @@ def submit_summarize(c, a):
     o["glossary"] = [{"term": str(g.get("term", ""))[:60], "meaning": str(g.get("meaning", ""))[:240]}
                      for g in (a.get("glossary") or [])[:6] if isinstance(g, dict) and g.get("term") and g.get("meaning")]
     status = "done" if o["value_score"] >= C.VALUE_MIN else "low"
-    c.execute("UPDATE items SET summary=?, value_score=?, category=?, status=?, embedding=NULL, done_at=?, "
-              "error=NULL WHERE id=?", (json.dumps(o), o["value_score"], o["category"], status, int(time.time()), r["id"]))
+    if rewrite:   # keep its place on the map (embedding) and its original date
+        c.execute("UPDATE items SET summary=?, value_score=?, category=?, status=?, error=NULL WHERE id=?",
+                  (json.dumps(o), o["value_score"], o["category"], status, r["id"]))
+    else:
+        c.execute("UPDATE items SET summary=?, value_score=?, category=?, status=?, embedding=NULL, done_at=?, "
+                  "error=NULL WHERE id=?", (json.dumps(o), o["value_score"], o["category"], status, int(time.time()), r["id"]))
     return f"{'kept' if status == 'done' else 'dropped'} ({o['value_score']}/10)"
 
 
@@ -331,9 +367,9 @@ def cmd_submit():
     except ValueError as e:
         return out({"error": f"not valid JSON: {e}"})
     kind = d.get("kind")
-    fn = {"triage": submit_triage, "resort": submit_resort, "summarize": submit_summarize, "fixcheck": submit_fixcheck}.get(kind)
+    fn = {"triage": submit_triage, "resort": submit_resort, "rewrite": submit_rewrite, "summarize": submit_summarize, "fixcheck": submit_fixcheck}.get(kind)
     if not fn:
-        return out({"error": "kind must be triage, resort, summarize or fixcheck"})
+        return out({"error": "kind must be triage, resort, summarize, rewrite or fixcheck"})
     c = conn()
     res = {}
     for a in d.get("answers") or []:
