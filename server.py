@@ -16,6 +16,7 @@ import psutil
 
 import config as C
 import db
+import patches
 
 STATIC = os.path.join(C.ROOT, "static")
 _cache = {}
@@ -42,7 +43,8 @@ def latest_run(c):
 def next_scheduled():
     now = dt.datetime.now()
     cands = []
-    for t in C.SCHEDULE_TIMES:
+    times = os.environ.get("NEWSMAP_TIMES", "").split(",") if AGENT else C.SCHEDULE_TIMES
+    for t in [x for x in times if x.strip()] or C.SCHEDULE_TIMES:
         h, m = map(int, t.split(":"))
         d = now.replace(hour=h, minute=m, second=0, microsecond=0)
         if d <= now:
@@ -67,20 +69,25 @@ def status():
         waiting=c.execute("SELECT COUNT(*) FROM items WHERE status='triaged'").fetchone()[0],
         last_success=db.meta_get(c, "last_success"))
     c.close()
-    return dict(running=alive, run=run, library=lib, next_scheduled=next_scheduled(), now=int(time.time()))
+    return dict(running=alive, run=run, library=lib, agent=agent_state(), next_scheduled=next_scheduled(), now=int(time.time()))
 
 
 def graph():
     c = conn()
     since = int(time.time()) - (C.BACKFILL_DAYS + 1) * 86400
     sig = c.execute("SELECT COUNT(*), MAX(done_at) FROM items WHERE status IN ('done','low')").fetchone()
-    key = (tuple(sig), since // 3600)
+    try:
+        psig = tuple(c.execute("SELECT COUNT(*), MAX(checked_at) FROM patch_checks").fetchone())
+    except Exception:
+        psig = ()
+    key = (tuple(sig), psig, since // 3600)
     if _cache.get("key") == key:
         c.close()
         return _cache["val"]
     rows = c.execute("SELECT id, summary, category, value_score, created_at, done_at, sources, engagement, "
                      "embedding, status FROM items WHERE status IN ('done','low') AND created_at>=? "
                      "ORDER BY created_at", (since,)).fetchall()
+    pst = patches.all_status(c)
     c.close()
     nodes, vecs, vidx = [], [], []
     for r in rows:
@@ -89,6 +96,8 @@ def graph():
         nodes.append(dict(id=r["id"], t=s["headline"], c=r["category"], v=r["value_score"], d=r["created_at"],
                           a=r["done_at"], s=sorted({x.get("source", "") for x in srcs}), g=s.get("tags", []),
                           e=r["engagement"], low=r["status"] == "low"))
+        if r["id"] in pst:
+            nodes[-1].update(p=pst[r["id"]][0], x=bool(pst[r["id"]][1]))
         if r["embedding"]:
             vecs.append(np.frombuffer(r["embedding"], dtype=np.float32))
             vidx.append(len(nodes) - 1)
@@ -120,26 +129,65 @@ def graph():
 def item(iid):
     c = conn()
     r = c.execute("SELECT * FROM items WHERE id=?", (iid,)).fetchone()
+    patch = patches.get(c, iid)
+    vuln = bool(r) and patches.is_vuln_story(r)
     c.close()
     if not r:
         return None
     return dict(id=r["id"], url=r["url"], title=r["title"], created_at=r["created_at"], done_at=r["done_at"],
                 sources=json.loads(r["sources"]), category=r["category"], value_score=r["value_score"],
-                interest=r["interest"], status=r["status"], summary=json.loads(r["summary"] or "{}"))
+                interest=r["interest"], status=r["status"], summary=json.loads(r["summary"] or "{}"),
+                patch=patch, vuln=vuln)
+
+
+def check_patch_now(iid):
+    """'Check again' button: databases only (fast); the AI part runs with the next update."""
+    c = patches.connect()
+    try:
+        rows = patches.due_items(c, ids=[iid])
+        if not rows:
+            return None
+        patches.check_item(c, rows[0], use_ai=False)
+        return patches.get(c, iid)
+    finally:
+        c.close()
+
+
+AGENT = os.environ.get("NEWSMAP_AI") == "claude"        # set by the home-server app on the Mac
+REQ_FLAG = os.path.join(C.DATA_DIR, "claude_request")    # the home-server app watches for this file
+RUN_FLAG = os.path.join(C.DATA_DIR, "claude_running")    # exists while a Claude (Haiku) session works
+
+
+def agent_state():
+    return dict(enabled=AGENT, running=os.path.exists(RUN_FLAG), requested=os.path.exists(REQ_FLAG))
 
 
 def start_worker():
+    if AGENT:   # Refresh = ask the home server to start a Haiku session
+        a = agent_state()
+        if a["running"] or a["requested"]:
+            return False
+        open(REQ_FLAG, "w").close()
+        return True
     c = conn()
     _, alive = latest_run(c)
     c.close()
     if alive:
         return False
-    pyw = os.path.join(C.ROOT, ".venv", "Scripts", "pythonw.exe")
-    if not os.path.exists(pyw):
-        pyw = sys.executable
-    subprocess.Popen([pyw, os.path.join(C.ROOT, "pipeline.py"), "--mode", "auto"], cwd=C.ROOT,
-                     creationflags=0x00000008 | 0x00000200 | 0x00004000,  # detached, own group, below-normal
-                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+    cmd_tail = [os.path.join(C.ROOT, "pipeline.py"), "--mode", "auto"]
+    io = dict(cwd=C.ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+    if C.IS_WIN:
+        pyw = os.path.join(C.ROOT, ".venv", "Scripts", "pythonw.exe")
+        if not os.path.exists(pyw):
+            pyw = sys.executable
+        subprocess.Popen([pyw] + cmd_tail,
+                         creationflags=0x00000008 | 0x00000200 | 0x00004000,  # detached, own group, below-normal
+                         **io)
+    else:
+        py = os.path.join(C.ROOT, ".venv", "bin", "python")
+        if not os.path.exists(py):
+            py = sys.executable
+        subprocess.Popen(["/usr/bin/nice", "-n", "10", py] + cmd_tail, start_new_session=True, **io)
     return True
 
 
@@ -200,6 +248,14 @@ class Handler(BaseHTTPRequestHandler):
         if u.path == "/api/refresh":
             ok = start_worker()
             return self._send(200 if ok else 409, {"started": ok})
+        if u.path == "/api/patch":
+            n = int(self.headers.get("Content-Length") or 0)
+            iid = json.loads(self.rfile.read(n) or b"{}").get("id", "")
+            try:
+                p = check_patch_now(str(iid))
+            except Exception as e:
+                return self._send(500, {"error": str(e)[:200]})
+            return self._send(200 if p else 404, p or {"error": "not a vulnerability story"})
         if u.path == "/api/control":
             n = int(self.headers.get("Content-Length") or 0)
             action = json.loads(self.rfile.read(n) or b"{}").get("action", "")
@@ -222,6 +278,7 @@ class ExclusiveServer(ThreadingHTTPServer):
 
 def main():
     db.connect().close()   # make sure the schema exists
+    patches.connect().close()
     try:
         srv = ExclusiveServer(("127.0.0.1", C.SERVER_PORT), Handler)
     except OSError:

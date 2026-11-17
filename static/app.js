@@ -28,7 +28,7 @@ let selectedId = null, hoverNode = null, hoverDay = null, hoverCat = null;
 let lastGraphSig = '', firstLoad = true, listAnim = true;
 let fxOn = store.get('nm_fx', true);
 let brief = null;   // briefing-mode state
-const filt = { q: '', days: 31, src: '', showLow: false, sort: 'best', day: null };
+const filt = { q: '', days: 31, src: '', fix: '', showLow: false, sort: 'best', day: null };
 const lastSeen = store.get('nm_lastSeen', 0);
 store.set('nm_lastSeen', Math.floor(nowS()));
 
@@ -74,8 +74,14 @@ function matchesBase(n) {           // everything except time filters
   if (n.low && !filt.showLow) return false;
   if (hiddenCats.has(n.c)) return false;
   if (filt.src && !n.s.includes(filt.src)) return false;
+  if (filt.fix) {
+    if (!n.p || n.p === 'n/a') return false;
+    if (filt.fix === 'open' && n.p === 'fixed') return false;
+    if (filt.fix === 'fixed' && n.p !== 'fixed') return false;
+    if (filt.fix === 'exploited' && !n.x) return false;
+  }
   if (filt.q) {
-    const hay = n._hay || (n._hay = (n.t + ' ' + n.g.join(' ') + ' ' + n.c + ' ' + n.s.join(' ')).toLowerCase());
+    const hay = n._hay || (n._hay = (n.t + ' ' + n.g.join(' ') + ' ' + n.c + ' ' + n.s.join(' ') + ' ' + (FIX[n.p]?.[1] || '') + (n.x ? ' exploited' : '')).toLowerCase());
     if (!filt.q.split(/\s+/).every(w => hay.includes(w))) return false;
   }
   return true;
@@ -396,7 +402,7 @@ function renderList() {
   list.innerHTML = vis.length ? vis.slice(0, 250).map((n, i) => `
     <div class="row ${n.id === selectedId ? 'sel' : ''}" data-id="${esc(n.id)}" style="--c:${colorOf(n)};--i:${i}">
       ${scoreRing(n.v, colorOf(n))}
-      <div><div class="t">${isNew(n) ? '<span class="new">NEW</span>' : ''}${esc(n.t)}</div>
+      <div><div class="t">${isNew(n) ? '<span class="new">NEW</span>' : ''}${fixBadge(n.p, n.x)}${esc(n.t)}</div>
       <div class="m">${esc(n.s.join(' · '))} · ${ago(n.d)}</div></div>
     </div>`).join('') : `<div class="empty-list">${data.nodes.length ? 'Nothing matches these filters' : 'Waiting for the first signals…'}</div>`;
   listAnim = false;
@@ -438,6 +444,61 @@ $('#tlBars').addEventListener('click', e => {
   listAnim = true; applyVisibility();
 });
 $('#tlDay').addEventListener('click', () => { filt.day = null; listAnim = true; applyVisibility(); });
+
+/* ---------- patch / fix status ---------- */
+const FIX = { fixed: ['fixed', 'Fixed', '✓'], partial: ['partial', 'Partly fixed', '◐'], no_fix: ['nofix', 'No fix yet', '✕'],
+  unknown: ['unknown', 'Fix unknown', '?'] };
+function fixBadge(p, x, big) {
+  const f = FIX[p]; if (!f && !x) return '';
+  return `${f ? `<span class="fx ${f[0]} ${big ? 'big' : ''}">${f[2]} ${f[1]}</span>` : ''}${x ? `<span class="fx kev ${big ? 'big' : ''}">⚠ Exploited</span>` : ''}`;
+}
+const linkList = (arr, label) => arr?.length ? `<div class="pt-row"><span class="pt-k">${label}</span><span class="pt-v">${arr.map(u => safeUrl(u)
+  ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 64))} ↗</a>` : '').join('')}</span></div>` : '';
+const kv = (k, v) => v ? `<div class="pt-row"><span class="pt-k">${k}</span><span class="pt-v">${v}</span></div>` : '';
+function patchHtml(it) {
+  const p = it.patch;
+  if (!p) return `<div class="pt-empty">Not checked yet. <button class="ibtn sm" data-fixcheck="${esc(it.id)}">Check for a fix now</button></div>`;
+  const ids = (p.ids || []).map(x => {
+    const ref = x.id.startsWith('CVE-') ? `https://nvd.nist.gov/vuln/detail/${x.id}` : `https://github.com/advisories/${x.id}`;
+    const k = x.kev;
+    return `<div class="pt-id">
+      <div class="pt-head"><a class="mono" href="${ref}" target="_blank" rel="noopener">${esc(x.id)} ↗</a>${fixBadge(x.status)}
+        ${x.cvss ? `<span class="pt-cvss mono" title="${esc(x.cvss)}">CVSS ${esc(x.cvss.split('/')[0].replace('CVSS:', 'v'))}</span>` : ''}
+        <a class="pt-osv" href="https://osv.dev/vulnerability/${esc(x.id)}" target="_blank" rel="noopener">OSV ↗</a></div>
+      ${x.summary ? `<p class="pt-sum">${esc(x.summary)}</p>` : ''}
+      ${k ? `<div class="pt-kev">⚠ <b>Exploited in the wild</b> (CISA, added ${esc(k.added || '')})${k.ransomware ? ' · used by ransomware' : ''}<br>
+        <span>Required action: ${esc(k.action || '')}${k.due ? ` · deadline ${esc(k.due)}` : ''}</span></div>` : ''}
+      ${kv('Fixed in', (x.fixed_in || []).map(v => `<span class="chip">${esc(v)}</span>`).join(''))}
+      ${kv('Patched by', (x.distros || []).map(v => `<span class="chip">${esc(v)}</span>`).join(''))}
+      ${kv('Still open', (x.pkg_open || []).filter(v => !(x.pkg_fixed || []).includes(v)).map(v => `<span class="chip bad">${esc(v)}</span>`).join(''))}
+      ${linkList(x.commits, 'Fix commit')}${linkList(x.fix_links, 'Patch')}${x.status !== 'fixed' ? linkList(x.advisories, 'Advisory') : ''}
+      ${!x.found ? '<div class="pt-note">Not in OSV or NVD yet (very new CVEs can take a few days).</div>' : ''}
+    </div>`;
+  }).join('');
+  const ai = p.ai && p.ai.verdict !== 'not_a_vulnerability' ? `<div class="pt-ai"><span class="pt-k">From the article (AI)</span>
+    <b>${esc({ fixed: 'Says it is fixed', no_fix: p.ai.raw_verdict === 'workaround_only' ? 'Only a workaround so far' : 'Says there is no fix yet', unclear: 'Doesn’t say' }[p.ai.verdict] || p.ai.verdict)}</b>
+    ${p.ai.product ? ` · ${esc(p.ai.product)}` : ''}${p.ai.fixed_in ? ` · fixed in <b>${esc(p.ai.fixed_in)}</b>` : ''}
+    ${p.ai.evidence ? `<div class="pt-ev">${esc(p.ai.evidence)}</div>` : ''}</div>` : '';
+  const rel = p.related?.length ? `<div class="pt-rel"><span class="pt-k">Possibly related CVEs (NVD search for “${esc(p.ai?.product || '')}”)</span>
+    ${p.related.map(r => `<div><a class="mono" href="https://nvd.nist.gov/vuln/detail/${esc(r.id)}" target="_blank" rel="noopener">${esc(r.id)} ↗</a> ${esc(r.desc)}</div>`).join('')}</div>` : '';
+  const none = !ids && !ai ? `<div class="pt-note">No CVE number in this story. The AI check runs with the next Refresh.</div>` : '';
+  return `<div class="pt-top">${fixBadge(p.status, p.exploited, true)}
+      <span class="pt-when">checked ${ago(p.checked_at)}${p.status !== 'fixed' ? ' · rechecks every 12 h' : ''}</span>
+      <button class="ibtn sm" data-fixcheck="${esc(it.id)}">Check again</button></div>${ids}${ai}${rel}${none}`;
+}
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-fixcheck]'); if (!b) return;
+  const id = b.dataset.fixcheck; b.disabled = true; b.textContent = 'Checking…';
+  try {
+    const r = await fetch('/api/patch', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
+    const p = await r.json();
+    if (!r.ok) throw new Error(p.error || r.status);
+    const n = nodesById.get(id); if (n) { n.p = p.status; n.x = p.exploited; n._hay = null; }
+    const box = document.getElementById('patchBox');
+    if (box && selectedId === id) box.innerHTML = patchHtml({ id, patch: p });
+    renderList();
+  } catch (err) { b.disabled = false; b.textContent = 'Check again'; toast('Fix check failed: ' + esc(String(err.message || err))); }
+});
 
 /* =====================================================================
    DOSSIER
@@ -493,9 +554,11 @@ async function openItem(id, fly) {
         `<span class="ck ${s.checks[k] ? (neg ? 'neg' : 'on') : ''}">${s.checks[k] ? (neg ? '✕' : '✓') : '·'} ${label}</span>`).join('')}</div>` : ''}
       <div class="why">${esc(s.value_reason || '')}</div></div></div>
     ${s.tldr ? `<p class="d-tldr" ${rv()}>${esc(s.tldr)}</p>` : ''}
+    ${it.vuln ? `<section class="d-sec" ${rv()}><h4>Fix status <small>OSV · NVD · CISA KEV</small></h4><div id="patchBox" class="patch">${patchHtml(it)}</div></section>` : ''}
     ${s.key_points?.length ? `<section class="d-sec" ${rv()}><h4>Key points</h4><ol class="kp">${list(s.key_points)}</ol></section>` : ''}
     ${s.why_it_matters ? `<section class="d-sec" ${rv()}><h4>Why it matters</h4><p class="d-why">${esc(s.why_it_matters)}</p></section>` : ''}
     ${s.insider_notes?.length ? `<section class="d-sec" ${rv()}><h4>Insider notes <small>from the discussion</small></h4><div class="notes">${s.insider_notes.map(x => `<div class="note">${esc(x)}</div>`).join('')}</div></section>` : ''}
+    ${s.glossary?.length ? `<section class="d-sec" ${rv()}><h4>Words explained</h4><dl class="gloss">${s.glossary.map(g => `<dt>${esc(g.term)}</dt><dd>${esc(g.meaning)}</dd>`).join('')}</dl></section>` : ''}
     ${s.entities?.length || s.tags?.length ? `<section class="d-sec" ${rv()}><h4>Entities &amp; tags</h4><div class="chips">${(s.entities || []).map(e => `<span class="chip">${esc(e)}</span>`).join('')}${(s.tags || []).map(t => `<span class="chip tag">#${esc(t)}</span>`).join('')}</div></section>` : ''}
     <section class="d-sec" ${rv()}><h4>Sources</h4><div class="srcs">${srcs}</div></section>
     <div class="d-actions" ${rv()}>
@@ -587,6 +650,7 @@ $('#sort').addEventListener('click', e => {
 let qTimer;
 $('#q').addEventListener('input', e => { clearTimeout(qTimer); qTimer = setTimeout(() => { filt.q = e.target.value.trim().toLowerCase(); listAnim = true; applyVisibility(); }, 160); });
 $('#src').onchange = e => { filt.src = e.target.value; listAnim = true; applyVisibility(); };
+$('#fix').onchange = e => { filt.fix = e.target.value; listAnim = true; applyVisibility(); };
 $('#showLow').onchange = e => { filt.showLow = e.target.checked; listAnim = true; applyVisibility(); };
 $('#fxBtn').onclick = () => { fxOn = !fxOn; guardTripped = false; lowStreak = 0; store.set('nm_fx', fxOn); applyFx();
   if (eco && fxOn) toast('Glow returns automatically when the scan finishes'); };
@@ -606,7 +670,10 @@ $('#refreshBtn').onclick = async () => {
   if ($('#refreshBtn').classList.contains('busy')) return;
   const r = await fetch('/api/refresh', { method: 'POST' });
   missionHidden = false;
-  toast(r.status === 409 ? 'An update is already running' : 'Scan started: stars will appear as stories are read');
+  const ag = lastStatus?.agent?.enabled;
+  toast(r.status === 409 ? 'An update is already running'
+    : ag ? 'Asked Haiku to read the latest news. New stars appear as it finishes stories (usually 10–30 min).'
+    : 'Scan started: stars will appear as stories are read');
   poll();
 };
 async function control(action) { await fetch('/api/control', { method: 'POST', body: JSON.stringify({ action }) }); poll(); }
@@ -626,7 +693,7 @@ $('#statusPill').onclick = () => { missionHidden = false; if (lastStatus?.run) {
    ===================================================================== */
 let lastStatus = null, wasRunning = false, lastKept = -1, lastGraphLoad = 0, pollTimer;
 const STATE_TXT = { running: 'Scanning', waiting: 'Waiting for GPU', paused: 'Paused', done: 'Complete', failed: 'Failed', stopped: 'Stopped', interrupted: 'Interrupted' };
-const STEP_META = { collect: ['Collect', '⇣'], triage: ['Filter', '⌕'], summarize: ['Read', '✎'], map: ['Map', '✦'] };
+const STEP_META = { collect: ['Collect', '⇣'], triage: ['Filter', '⌕'], summarize: ['Read', '✎'], patches: ['Fixes', '⛨'], map: ['Map', '✦'] };
 
 async function poll() {
   clearTimeout(pollTimer);
@@ -648,8 +715,11 @@ function renderStatus(st) {
   const run = st.run, lib = st.library;
   setEco(!!st.running);
   const rb = $('#refreshBtn');
-  rb.classList.toggle('busy', st.running); $('#refreshTxt').textContent = st.running ? 'Scanning' : 'Refresh';
-  if (st.running) {
+  const agBusy = !st.running && (st.agent?.running || st.agent?.requested);
+  rb.classList.toggle('busy', st.running || agBusy); $('#refreshTxt').textContent = st.running ? 'Scanning' : agBusy ? 'Haiku working' : 'Refresh';
+  if (agBusy) {
+    setPill(st.agent.running ? `Haiku is reading the news · ${lib.done} signals` : 'starting Haiku…', 'run');
+  } else if (st.running) {
     const w = run.state === 'waiting', p = run.state === 'paused';
     setPill(`${w ? 'waiting for GPU' : p ? 'paused' : 'scanning'} · ${run.pct}% · ${fmtDur(run.eta_s)} left`, w || p ? 'wait' : 'run');
   } else {

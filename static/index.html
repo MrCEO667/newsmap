@@ -37,6 +37,9 @@
       <button data-v="1">24H</button><button data-v="3">3D</button><button data-v="7">7D</button><button data-v="31" class="on">30D</button>
     </div>
     <div class="selwrap"><select id="src" aria-label="Source"><option value="">All sources</option></select></div>
+    <div class="selwrap"><select id="fix" aria-label="Fix status" title="Vulnerability stories: has a fix been released?">
+      <option value="">Any fix status</option><option value="open">Not fixed yet</option><option value="fixed">Fixed</option>
+      <option value="exploited">Exploited in the wild</option><option value="vuln">All vulnerabilities</option></select></div>
     <label class="switch" title="Show stories the AI dropped as shallow after reading">
       <input type="checkbox" id="showLow"><span class="knob"></span><span class="sw-l">Dropped</span>
     </label>

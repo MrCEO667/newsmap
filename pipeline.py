@@ -9,7 +9,11 @@ os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")   # numpy barely used; avoid 
 import argparse
 import datetime as dt
 import json
-import msvcrt
+try:
+    import msvcrt
+except ImportError:   # macOS / Linux
+    msvcrt = None
+    import fcntl
 import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -20,10 +24,11 @@ import psutil
 import config as C
 import db
 import llm
+import patches
 import sources as S
 
 STAGES = [("collect", "Collect sources"), ("triage", "Filter noise (headline check)"),
-          ("summarize", "Read & summarize"), ("map", "Place on map")]
+          ("summarize", "Read & summarize"), ("patches", "Check for fixes"), ("map", "Place on map")]
 DEFAULT_AVG = {"collect_task": 2.0, "triage_item": 1.0, "summarize_item": 22.0, "pass_rate": 0.15}
 ALL_SOURCES = ["hn", "lobsters", "reddit", "hf", "kev", "ghsa", "rss"]
 
@@ -506,6 +511,30 @@ def stage_summarize(c, P, now, cap, mode="update"):
     P.finish_stage("summarize", f"{st['kept']} kept, {st['low']} dropped as shallow")
 
 
+# ============================================================== stage 3b
+def stage_patches(c, P):
+    """Vulnerability stories: is there a fix yet? Databases first, the AI only when they have no answer."""
+    c.executescript(patches.SCHEMA)
+    rows = patches.due_items(c)
+    P.stage("patches", len(rows), "looking up fixes in OSV, NVD and CISA KEV")
+    counts = {}
+    for r in rows:
+        P.check()
+        P.s["current"] = f"Fix check: {snip(r['title'], 70)}"
+        if r["category"] in patches.VULN_CATEGORIES:
+            P.wait_gpu()
+        try:
+            st = patches.check_item(c, r, use_ai=True, log=P.warn)
+            counts[st] = counts.get(st, 0) + 1
+        except StopRun:
+            raise
+        except Exception as e:
+            P.warn(f"Fix check failed: {short_err(e)}")
+        P.step("patches")
+    names = {"fixed": "fixed", "partial": "partly fixed", "no_fix": "no fix yet", "unknown": "unknown"}
+    P.finish_stage("patches", ", ".join(f"{n} {names.get(k, k)}" for k, n in counts.items()) or "nothing due")
+
+
 # ============================================================== stage 4
 def stage_map(c, P):
     rows = c.execute("SELECT id, summary FROM items WHERE status IN ('done','low') AND embedding IS NULL").fetchall()
@@ -544,7 +573,10 @@ def main():
     lockf = open(C.LOCK_PATH, "a+")
     for attempt in range(16):   # a just-stopped run may still be shutting down: give it up to ~30 s
         try:
-            msvcrt.locking(lockf.fileno(), msvcrt.LK_NBLCK, 1)
+            if msvcrt:
+                msvcrt.locking(lockf.fileno(), msvcrt.LK_NBLCK, 1)
+            else:
+                fcntl.flock(lockf.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
             break
         except OSError:
             time.sleep(2)
@@ -552,7 +584,7 @@ def main():
         print("Another update is already running.")
         return
     try:
-        psutil.Process().nice(psutil.BELOW_NORMAL_PRIORITY_CLASS)
+        psutil.Process().nice(psutil.BELOW_NORMAL_PRIORITY_CLASS if C.IS_WIN else 10)
     except Exception:
         pass
 
@@ -594,6 +626,7 @@ def main():
                 db.meta_set(c, "last_full_collect", now)
         stage_triage(c, P, now)
         stage_summarize(c, P, now, cap, mode)
+        stage_patches(c, P)
         stage_map(c, P)
         db.meta_set(c, "last_success", int(time.time()))
         if mode == "backfill" and set(only) == set(ALL_SOURCES) and not args.days:
