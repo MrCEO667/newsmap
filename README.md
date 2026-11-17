@@ -17,6 +17,28 @@ A local 3D map of early AI and cybersecurity news. A local model (Qwen3-8B via O
 3. **Read & summarize.** Downloads the article plus the top comments from HN, Lobsters and Reddit, then writes the brief: TL;DR, key points, why it matters, insider notes from the discussion, and a value score. Stories that score below 6 after reading are hidden (tick "dropped" to see them).
 4. **Map.** Small embeddings (computed on the CPU) place similar stories close together, grouped by topic.
 
+## Fix tracker (is the vulnerability patched?)
+For every vulnerability story, `patches.py` looks up whether a fix exists:
+- **OSV.dev**: fixed package versions, fixing commits, Linux distro patches
+- **NVD**: patch links and the vendor's advisory (only when OSV has nothing)
+- **CISA KEV**: whether it is exploited in the wild, plus the official required action
+- **AI fallback**: reads the article and vendor advisory when the databases have no answer
+
+Each story shows a badge (Fixed / Partly fixed / No fix yet / Fix unknown / Exploited) and a "Fix status" section.
+Use the fix-status menu at the top to filter. Anything not fixed is re-checked every 12 hours for 60 days.
+
+## Using Claude (Haiku) instead of the local model (macOS)
+On a small Mac the local model doesn't fit, so the AI work can be done by Claude Code instead:
+- `agent.py` hands out work in batches (`collect`, `guide`, `next`, `submit`, `finish`, `status`) and saves the answers
+  using the same prompts and scoring as the local pipeline.
+- `.claude/commands/process-news.md` is the `/process-news` command that drives it. Briefs are written in plain
+  English, with a "Words explained" box.
+- Run it by hand: `claude --model haiku`, then `/process-news collect`
+- Or without a window: `claude -p "/process-news collect 25" --model haiku --allowedTools "Bash(.venv/bin/python agent.py:*)" "Edit(./data/answers/**)"`
+  (the author's home server runs this at 08:00 and 20:00, and when Refresh is pressed with `NEWSMAP_AI=claude`).
+
+Environment variables: `NEWSMAP_PORT` (default 8765), `NEWSMAP_LLM_MODEL`, `NEWSMAP_AI=claude` (Refresh asks for a Claude run).
+
 ## Being gentle with the PC
 - Runs at below-normal CPU priority. Feed downloads are spaced out per site.
 - Before each AI call it checks GPU memory. If other apps hold more than ~2.2 GB, it **waits** instead of competing.

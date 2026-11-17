@@ -1,5 +1,9 @@
 """NewsMap settings. Edit values here; no code changes needed."""
 import os
+import shutil
+import sys
+
+IS_WIN = sys.platform == "win32"
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(ROOT, "data")
@@ -8,12 +12,13 @@ LOG_PATH = os.path.join(DATA_DIR, "worker.log")
 LOCK_PATH = os.path.join(DATA_DIR, "worker.lock")
 FEEDS_CACHE = os.path.join(DATA_DIR, "hn-popular-blogs.opml")
 
-SERVER_PORT = 8765
+SERVER_PORT = int(os.environ.get("NEWSMAP_PORT", "8765"))
 
 # ---- Local AI (Ollama) -------------------------------------------------------
 OLLAMA_URL = "http://127.0.0.1:11434"
-OLLAMA_EXE = r"D:\Ollama\ollama.exe"
-LLM_MODEL = "hf.co/DreamFast/qwen3-8b-heretic:Q4_K_M"
+OLLAMA_EXE = r"D:\Ollama\ollama.exe" if IS_WIN else (shutil.which("ollama") or "/usr/local/bin/ollama")
+LLM_MODEL = os.environ.get("NEWSMAP_LLM_MODEL",
+                           "hf.co/DreamFast/qwen3-8b-heretic:Q4_K_M" if IS_WIN else "qwen3:8b")
 EMBED_MODEL = "nomic-embed-text"
 NUM_CTX = 8192            # context window; bigger = more VRAM
 KEEP_ALIVE = "30m"        # stays loaded through short waits; every run unloads it explicitly when it ends

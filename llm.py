@@ -7,7 +7,7 @@ import requests
 
 import config as C
 
-NO_WINDOW = 0x08000000
+NO_WINDOW = 0x08000000 if C.IS_WIN else 0   # creationflags must be 0 off Windows
 
 
 def ollama_up():
@@ -22,9 +22,10 @@ def ensure_ollama():
     if ollama_up():
         return True
     try:
-        subprocess.Popen([C.OLLAMA_EXE, "serve"], creationflags=NO_WINDOW | 0x00000008,
+        subprocess.Popen([C.OLLAMA_EXE, "serve"], creationflags=(NO_WINDOW | 0x00000008) if C.IS_WIN else 0,
+                         start_new_session=not C.IS_WIN,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    except OSError:
+    except (OSError, ValueError):
         return False
     for _ in range(30):
         time.sleep(1)

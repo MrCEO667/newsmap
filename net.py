@@ -16,6 +16,7 @@ _last = {}
 HOST_INTERVAL = {
     "www.reddit.com": 15.0, "reddit.com": 15.0,   # Reddit rate-limits anonymous readers hard
     "lobste.rs": 1.0, "api.github.com": 1.0,
+    "services.nvd.nist.gov": 6.5,                 # NVD allows 5 requests / 30 s without an API key
     "hacker-news.firebaseio.com": 0.1, "hn.algolia.com": 0.3,
 }
 
